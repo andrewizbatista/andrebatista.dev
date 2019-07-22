@@ -1,3 +1,4 @@
+import { styled } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
 
 export default createMuiTheme({
@@ -42,4 +43,10 @@ export default createMuiTheme({
       disableRipple: true,
     },
   },
+});
+
+export const GlobalStyles = styled('div')({
+  backgroundColor: '#333',
+  height: '100vh',
+  width: '100vw',
 });

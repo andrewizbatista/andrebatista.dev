@@ -4,7 +4,7 @@ import App, { Container } from 'next/app';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { ThemeProvider } from '@material-ui/styles';
 
-import theme from 'app/theme';
+import theme, { GlobalStyles } from 'app/theme';
 
 class MyApp extends App {
   public render(): JSX.Element {
@@ -14,7 +14,9 @@ class MyApp extends App {
       <Container>
         <CssBaseline />
         <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+          <GlobalStyles>
+            <Component {...pageProps} />
+          </GlobalStyles>
         </ThemeProvider>
       </Container>
     );
