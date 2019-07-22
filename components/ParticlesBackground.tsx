@@ -2,22 +2,10 @@ import React from 'react';
 
 import Particles from 'react-particles-js';
 
+import particlesParams from 'data/particles';
+
 const ParticlesBackground = ({  }: IParticlesBackground): any => {
-  return (
-    <Particles
-      width="40vw"
-      height="99vh"
-      params={{
-        polygon: {
-          enable: true,
-          type: 'inside',
-          move: {
-            radius: 10,
-          },
-        },
-      }}
-    />
-  );
+  return <Particles height="100%" params={particlesParams} />;
 };
 
 interface IParticlesBackground {}

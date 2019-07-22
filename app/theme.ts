@@ -4,8 +4,11 @@ import { createMuiTheme } from '@material-ui/core/styles';
 export default createMuiTheme({
   palette: {
     type: 'dark',
+    background: {
+      default: '#333',
+    },
     primary: {
-      main: '#ff4400',
+      main: '#8e3545',
       // light: will be calculated from palette.primary.main,
       // dark: will be calculated from palette.primary.main,
       // contrastText: will be calculated to contrast with palette.primary.main
@@ -24,18 +27,16 @@ export default createMuiTheme({
     },
   },
   typography: {
-    fontFamily: [
-      '-apple-system',
-      'BlinkMacSystemFont',
-      '"Segoe UI"',
-      'Roboto',
-      '"Helvetica Neue"',
-      'Arial',
-      'sans-serif',
-      '"Apple Color Emoji"',
-      '"Segoe UI Emoji"',
-      '"Segoe UI Symbol"',
-    ].join(','),
+    h1: {
+      fontSize: '8rem',
+      fontWeight: 'bold',
+    },
+    h2: {
+      fontSize: '2rem',
+      fontWeight: 'normal',
+      letterSpacing: '-1px',
+    },
+    fontFamily: ['Roboto Mono', 'monospace'].join(','),
   },
   overrides: {},
   props: {
@@ -46,7 +47,13 @@ export default createMuiTheme({
 });
 
 export const GlobalStyles = styled('div')({
-  backgroundColor: '#333',
   height: '100vh',
   width: '100vw',
+  backgroundImage: 'url(static/andrebatista.png)',
+  backgroundPosition: 'right',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'contain',
 });
+
+// background: rgba(0, 249, 158, 0.99);
+// color: #333;
