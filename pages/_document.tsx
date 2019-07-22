@@ -8,6 +8,7 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
+        <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js" />
         <body>
           <Main />
           <NextScript />
