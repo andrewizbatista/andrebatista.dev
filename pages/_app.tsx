@@ -11,14 +11,14 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <Container>
-        <CssBaseline />
+      <GlobalStyles>
         <ThemeProvider theme={theme}>
-          <GlobalStyles>
+          <Container>
+            <CssBaseline />
             <Component {...pageProps} />
-          </GlobalStyles>
+          </Container>
         </ThemeProvider>
-      </Container>
+      </GlobalStyles>
     );
   }
 }

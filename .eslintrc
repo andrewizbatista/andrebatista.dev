@@ -30,6 +30,8 @@
     "@typescript-eslint/no-explicit-any": 0,
     "no-empty-pattern": 0,
     "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
-    "react/jsx-filename-extension": 0
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-filename-extension": 0,
+    "react/jsx-one-expression-per-line": 0
   }
 }

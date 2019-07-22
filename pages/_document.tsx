@@ -8,6 +8,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap"
+          rel="stylesheet"
+        />
         <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js" />
         <body>
           <Main />
