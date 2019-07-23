@@ -1,5 +1,7 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/styles';
+import { Theme } from '@material-ui/core/styles';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 
@@ -9,15 +11,15 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
 // Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles(({  }: Theme) => ({
   socialIcon: {
     marginRight: '1rem',
     cursor: 'pointer',
   },
-});
+}));
 
-const SocialFooter = ({  }: ISocialFooter): any => {
-  const classes = useStyles();
+const SocialFooter = ({  }: ISocialFooter) => {
+  const classes = useStyles(useTheme());
 
   return (
     <Grid container direction="column">

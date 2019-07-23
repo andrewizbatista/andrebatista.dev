@@ -2,26 +2,15 @@ const appConfig: IAppConfig = {
   developerSignature: 'André Batista < @andrewizbatista >',
   developerWebsite: 'https://andrebatista.dev',
 
-  appName: 'Nextjs Boilerplate',
+  appName: 'André Batista',
   appWebsite: 'https://andrebatista.dev',
-  appThemeColor: '#ff4400',
+  appThemeColor: '#8e3545',
   defaultLocale: {
     code: 'en',
     codeRegion: 'en_GB',
     name: 'English',
   },
-  availableLocales: [
-    {
-      code: 'en',
-      codeRegion: 'en_GB',
-      name: 'English',
-    },
-    {
-      code: 'pt',
-      codeRegion: 'pt_PT',
-      name: 'Português',
-    },
-  ],
+  availableLocales: [],
 };
 
 export default appConfig;
@@ -34,7 +23,7 @@ export interface IAppConfig {
   appWebsite: string;
   appThemeColor: string;
   defaultLocale: ILocale;
-  availableLocales: ILocale[];
+  availableLocales?: ILocale[];
 }
 
 export interface ILocale {

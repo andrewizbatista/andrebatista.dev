@@ -19,7 +19,7 @@ const useStyles = makeStyles({
   },
 });
 
-const Homepage = ({ page }: IHomepage): any => {
+const Homepage = ({ page }: IHomepage) => {
   const classes = useStyles();
 
   return (
@@ -52,7 +52,7 @@ Homepage.getInitialProps = async (): Promise<IHomepage> => {
   // do your queries here and build up all the props the Page will need.
 
   return {
-    page: mockPage(1),
+    page: mockPage(1, { metaTitle: 'André Batista' }),
   };
 };
 

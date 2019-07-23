@@ -1,5 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/styles';
+import { Theme } from '@material-ui/core/styles';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
@@ -13,9 +14,9 @@ import ParticlesSidebar from 'components/Layout/ParticlesSidebar';
 import IPage from 'app/entities/Page';
 
 // Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles(({ palette }: Theme) => ({
   sidebar: {
-    backgroundColor: '#8e3545',
+    backgroundColor: palette.primary.dark,
     height: '100vh',
     '& div': {
       height: '99%',
@@ -25,10 +26,10 @@ const useStyles = makeStyles({
     boxShadow: '-5px 0px 3px -1px rgba(0,0,0,0.5)',
     height: '100vh',
   },
-});
+}));
 
-const PageLayout = ({ page, children }: IPageLayout): any => {
-  const classes = useStyles();
+const PageLayout = ({ page, children }: IPageLayout) => {
+  const classes = useStyles(useTheme());
 
   return (
     <>
