@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import { IParticlesParams } from 'react-particles-js';
 
-const particlesParams: IParticlesParams = {
+const contentParticles: IParticlesParams = {
   particles: {
     number: {
       value: 80,
@@ -39,4 +39,4 @@ const particlesParams: IParticlesParams = {
   // fps_limit: 60
 };
 
-export default particlesParams;
+export default contentParticles;
