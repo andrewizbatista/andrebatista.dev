@@ -1,7 +1,7 @@
 /**
  * Generate an amount of entities based on the faker data provided.
  */
-export default (fakeEntity: any, howMany: number, overwrites?: {}): any => {
+export default (fakeEntity: any, howMany: number, overwrites?: {}) => {
   const generateFakeEntity = (): any =>
     overwrites ? { ...fakeEntity(), ...overwrites } : fakeEntity();
 

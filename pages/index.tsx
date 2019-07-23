@@ -10,7 +10,8 @@ import PageLayout from 'components/Layout/PageLayout';
 import SocialFooter from 'components/SocialFooter';
 
 // Others
-import IPage, { mockPage } from 'app/entities/Page';
+import IPage from 'app/entities/Page';
+import mockPage from 'app/mocks/mockPage';
 
 // Styles
 const useStyles = makeStyles({
