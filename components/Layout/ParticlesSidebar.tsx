@@ -4,10 +4,10 @@ import Particles from 'react-particles-js';
 
 import particlesParams from 'data/particles';
 
-const ParticlesBackground = ({  }: IParticlesBackground): any => {
+const ParticlesSidebar = ({  }: IParticlesSidebar): any => {
   return <Particles height="100%" params={particlesParams} />;
 };
 
-interface IParticlesBackground {}
+interface IParticlesSidebar {}
 
-export default ParticlesBackground;
+export default ParticlesSidebar;
