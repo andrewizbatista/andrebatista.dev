@@ -1,13 +1,12 @@
 import React from 'react';
-import Particles from 'react-particles-js';
+import Particles, { IParticlesParams } from 'react-particles-js';
 
-// Data
-import particlesParams from 'data/particles';
-
-const ParticlesSidebar = ({  }: IParticlesSidebar) => {
-  return <Particles height="100%" params={particlesParams} />;
+const ParticlesSidebar = ({ particles }: IParticlesSidebar) => {
+  return <Particles height="100%" params={particles} />;
 };
 
-interface IParticlesSidebar {}
+interface IParticlesSidebar {
+  particles: IParticlesParams;
+}
 
 export default ParticlesSidebar;

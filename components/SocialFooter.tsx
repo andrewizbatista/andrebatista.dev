@@ -18,14 +18,20 @@ const useStyles = makeStyles(({  }: Theme) => ({
   },
 }));
 
-const SocialFooter = ({  }: ISocialFooter) => {
+const SocialFooter = ({ socials }: ISocialFooter) => {
   const classes = useStyles(useTheme());
+
+  const { github, twitter } = socials;
 
   return (
     <Grid container direction="column">
       <Grid item>
-        <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} size="4x" />
-        <FontAwesomeIcon className={classes.socialIcon} icon={faTwitter} size="4x" />
+        <Link href={github} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} size="4x" />
+        </Link>
+        <Link href={twitter} target="_blank" rel="noopener noreferrer">
+          <FontAwesomeIcon className={classes.socialIcon} icon={faTwitter} size="4x" />
+        </Link>
       </Grid>
       <Grid item>
         <Typography>
@@ -40,6 +46,11 @@ const SocialFooter = ({  }: ISocialFooter) => {
   );
 };
 
-export interface ISocialFooter {}
+export interface ISocialFooter {
+  socials: {
+    github: string;
+    twitter: string;
+  };
+}
 
 export default SocialFooter;

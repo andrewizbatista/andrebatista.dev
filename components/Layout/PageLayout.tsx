@@ -13,6 +13,9 @@ import ParticlesSidebar from 'components/Layout/ParticlesSidebar';
 // Others
 import IPage from 'app/entities/Page';
 
+// Data
+import contentParticles from 'content/particles';
+
 // Styles
 const useStyles = makeStyles(({ palette }: Theme) => ({
   sidebar: {
@@ -23,7 +26,7 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
     },
   },
   content: {
-    boxShadow: '-5px 0px 3px -1px rgba(0,0,0,0.5)',
+    boxShadow: '-5px 0px 3px 0px rgba(0,0,0,0.5)',
     height: '100vh',
   },
 }));
@@ -36,7 +39,7 @@ const PageLayout = ({ page, children }: IPageLayout) => {
       <MetaTags page={page} />
       <Grid container direction="row" justify="space-between" alignItems="stretch">
         <Grid item xs={12} sm={3} className={classes.sidebar}>
-          <ParticlesSidebar />
+          <ParticlesSidebar particles={contentParticles} />
         </Grid>
         <Grid item xs={12} sm={9} className={classes.content}>
           <Container>{children}</Container>
@@ -51,5 +54,4 @@ export default PageLayout;
 export interface IPageLayout {
   page: IPage;
   children: any;
-  noSidebar?: boolean;
 }
