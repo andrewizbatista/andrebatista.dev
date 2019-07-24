@@ -8,6 +8,7 @@ const MetaTags = ({
 }: IMetaTags): any => {
   return (
     <Head>
+      <title>{metaTitle}</title>
       <meta name="title" content={metaTitle} />
       <meta name="description" content={metaDescription} />
       {metaKeywords && <meta name="keywords" content={metaKeywords} />}
