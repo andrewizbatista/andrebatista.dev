@@ -1,5 +1,6 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/styles';
+import { Theme } from '@material-ui/core/styles';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
@@ -18,14 +19,20 @@ import IMe from 'app/entities/Me';
 import contentMe from 'content/me';
 
 // Styles
-const useStyles = makeStyles({
+const useStyles = makeStyles(({ spacing }: Theme) => ({
   wrapper: {
     height: '100vh',
   },
-});
+  spacingTop: {
+    paddingTop: spacing(5),
+  },
+  spacingBottom: {
+    paddingBottom: spacing(2),
+  },
+}));
 
 const Homepage = ({ page, me }: IHomepage) => {
-  const classes = useStyles();
+  const classes = useStyles(useTheme());
 
   const { name, handler, about, socials } = me;
 
@@ -37,14 +44,14 @@ const Homepage = ({ page, me }: IHomepage) => {
         justify="space-between"
         alignItems="stretch"
         className={classes.wrapper}>
-        <Grid item>
+        <Grid item className={classes.spacingTop}>
           <Typography variant="h1">{name}</Typography>
           <Typography variant="h2" color="primary">
             {handler}
           </Typography>
           <Typography variant="caption">{about}</Typography>
         </Grid>
-        <Grid item>
+        <Grid item className={classes.spacingBottom}>
           <SocialFooter socials={socials} />
         </Grid>
       </Grid>
