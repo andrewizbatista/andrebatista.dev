@@ -11,14 +11,18 @@ import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
 // Styles
-const useStyles = makeStyles(({  }: Theme) => ({
+const useStyles = makeStyles(({ palette }: Theme) => ({
   socialIcon: {
     marginRight: '1rem',
     cursor: 'pointer',
+    transition: 'color 0.2s ease',
+    '&:hover': {
+      color: palette.primary.light,
+    },
   },
 }));
 
-const SocialFooter = ({ socials }: ISocialFooter) => {
+const Socials = ({ socials }: ISocials) => {
   const classes = useStyles(useTheme());
 
   const { github, twitter } = socials;
@@ -46,11 +50,11 @@ const SocialFooter = ({ socials }: ISocialFooter) => {
   );
 };
 
-export interface ISocialFooter {
+export interface ISocials {
   socials: {
     github: string;
     twitter: string;
   };
 }
 
-export default SocialFooter;
+export default Socials;

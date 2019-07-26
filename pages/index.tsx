@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 
 // Components
 import PageLayout from 'components/Layout/PageLayout';
-import SocialFooter from 'components/SocialFooter';
+import Socials from 'components/Socials';
 
 // Others
 import IPage from 'app/entities/Page';
@@ -52,7 +52,7 @@ const Homepage = ({ page, me }: IHomepage) => {
           <Typography variant="caption">{about}</Typography>
         </Grid>
         <Grid item className={classes.spacingBottom}>
-          <SocialFooter socials={socials} />
+          <Socials socials={socials} />
         </Grid>
       </Grid>
     </PageLayout>
