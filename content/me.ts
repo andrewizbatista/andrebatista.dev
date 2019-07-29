@@ -8,6 +8,11 @@ const contentMe: IMe = {
     github: 'https://github.com/andrewizbatista',
     twitter: 'https://twitter.com/andrewizbatista',
   },
+  work: {
+    title: 'React Developer',
+    company: 'The Virtual Forge',
+    companyUrl: 'https://thevirtualforge.com',
+  },
 };
 
 export default contentMe;

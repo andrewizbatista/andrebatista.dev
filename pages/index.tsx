@@ -34,7 +34,7 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
 const Homepage = ({ page, me }: IHomepage) => {
   const classes = useStyles(useTheme());
 
-  const { name, handler, about, socials } = me;
+  const { name, handler, about, socials, work } = me;
 
   return (
     <PageLayout page={page}>
@@ -52,7 +52,7 @@ const Homepage = ({ page, me }: IHomepage) => {
           <Typography variant="caption">{about}</Typography>
         </Grid>
         <Grid item className={classes.spacingBottom}>
-          <Socials socials={socials} />
+          <Socials socials={socials} work={work} />
         </Grid>
       </Grid>
     </PageLayout>

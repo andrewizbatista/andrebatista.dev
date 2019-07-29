@@ -10,10 +10,14 @@ import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 
+// Others
+import { ISocial, IWork } from 'app/entities/Me';
+
 // Styles
 const useStyles = makeStyles(({ palette }: Theme) => ({
   socialIcon: {
     marginRight: '1rem',
+    marginBottom: '1rem',
     cursor: 'pointer',
     transition: 'color 0.2s ease',
     '&:hover': {
@@ -22,10 +26,11 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
   },
 }));
 
-const Socials = ({ socials }: ISocials) => {
+const Socials = ({ socials, work }: ISocials) => {
   const classes = useStyles(useTheme());
 
   const { github, twitter } = socials;
+  const { title, company, companyUrl } = work;
 
   return (
     <Grid container direction="column">
@@ -39,9 +44,9 @@ const Socials = ({ socials }: ISocials) => {
       </Grid>
       <Grid item>
         <Typography>
-          React Developer @{' '}
-          <Link href="https://thevirtualforge.com" target="_blank" rel="noopener noreferrer">
-            The Virtual Forge
+          {`${title} @ `}
+          <Link href={companyUrl} target="_blank" rel="noopener noreferrer">
+            {company}
           </Link>
         </Typography>
         <Typography variant="caption">Lisbon, Portugal</Typography>
@@ -51,10 +56,8 @@ const Socials = ({ socials }: ISocials) => {
 };
 
 export interface ISocials {
-  socials: {
-    github: string;
-    twitter: string;
-  };
+  socials: ISocial;
+  work: IWork;
 }
 
 export default Socials;
