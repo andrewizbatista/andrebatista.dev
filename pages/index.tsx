@@ -9,11 +9,14 @@ import Typography from '@material-ui/core/Typography';
 // Components
 import PageLayout from 'components/Layout/PageLayout';
 import Socials from 'components/Socials';
+import CuriosityStepper from 'components/CuriosityStepper';
 
 // Others
 import IPage from 'app/entities/Page';
 import mockPage from 'app/mocks/mockPage';
 import IMe from 'app/entities/Me';
+import ICuriosity from 'app/entities/Curiosity';
+import mockCuriosity from 'app/mocks/mockCuriosity';
 
 // Data
 import contentMe from 'content/me';
@@ -31,8 +34,9 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
   },
 }));
 
-const Homepage = ({ page, me }: IHomepage) => {
-  const classes = useStyles(useTheme());
+const Homepage = ({ page, me, curiosities }: IHomepage) => {
+  const theme = useTheme();
+  const classes = useStyles(theme);
 
   const { name, handler, about, socials, work } = me;
 
@@ -51,6 +55,9 @@ const Homepage = ({ page, me }: IHomepage) => {
           </Typography>
           <Typography variant="caption">{about}</Typography>
         </Grid>
+        <Grid item>
+          <CuriosityStepper curiosities={curiosities} />
+        </Grid>
         <Grid item className={classes.spacingBottom}>
           <Socials socials={socials} work={work} />
         </Grid>
@@ -65,12 +72,14 @@ Homepage.getInitialProps = async (): Promise<IHomepage> => {
   return {
     page: mockPage(1, { metaTitle: 'André Batista' }),
     me: contentMe,
+    curiosities: mockCuriosity(100),
   };
 };
 
 export interface IHomepage {
   page: IPage;
   me: IMe;
+  curiosities: ICuriosity[];
 }
 
 export default Homepage;

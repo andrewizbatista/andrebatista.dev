@@ -33,6 +33,7 @@
     "no-plusplus": [2, { "allowForLoopAfterthoughts": true }],
     "react/jsx-closing-bracket-location": 0,
     "react/jsx-filename-extension": 0,
-    "react/jsx-one-expression-per-line": 0
+    "react/jsx-one-expression-per-line": 0,
+    "react/jsx-wrap-multilines": 0
   }
 }
