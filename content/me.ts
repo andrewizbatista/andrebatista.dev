@@ -7,6 +7,7 @@ const contentMe: IMe = {
   socials: {
     github: 'https://github.com/andrewizbatista',
     twitter: 'https://twitter.com/andrewizbatista',
+    linkedin: 'https://www.linkedin.com/in/andrewizbatista/',
   },
   work: {
     title: 'React Developer',
