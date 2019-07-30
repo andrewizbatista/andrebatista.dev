@@ -38,10 +38,10 @@ const PageLayout = ({ page, children }: IPageLayout) => {
     <>
       <MetaTags page={page} />
       <Grid container direction="row" justify="space-between" alignItems="stretch">
-        <Grid item xs={12} sm={3} className={classes.sidebar}>
+        <Grid item xs={12} sm={3} lg={2} className={classes.sidebar}>
           <ParticlesSidebar particles={contentParticles} />
         </Grid>
-        <Grid item xs={12} sm={9} className={classes.content}>
+        <Grid item xs={12} sm={9} lg={10} className={classes.content}>
           <Container>{children}</Container>
         </Grid>
       </Grid>
