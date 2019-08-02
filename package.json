@@ -16,11 +16,13 @@
     "@fortawesome/react-fontawesome": "^0.1.4",
     "@material-ui/core": "^4.2.1",
     "@material-ui/styles": "^4.2.1",
+    "@types/core-js": "^2.5.2",
     "@types/faker": "^4.1.5",
     "@types/next": "^8.0.5",
     "@types/react": "^16.8.22",
     "@types/react-dom": "^16.8.4",
     "@types/styled-components": "^4.1.16",
+    "core-js": "^3.1.4",
     "faker": "^4.1.0",
     "next": "^9.0.2",
     "react": "^16.8.6",
@@ -28,7 +30,8 @@
     "react-markdown": "^4.1.0",
     "react-particles-js": "^2.6.0",
     "styled-components": "^4.3.2",
-    "typescript": "^3.5.2"
+    "typescript": "^3.5.2",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^1.11.0",
