@@ -14,7 +14,7 @@ import ParticlesSidebar from 'components/Layout/ParticlesSidebar';
 import IPage from 'app/entities/Page';
 
 // Data
-import contentParticles from 'content/particles';
+import contentParticles from 'app/content/particles';
 
 // Styles
 const useStyles = makeStyles(({ palette }: Theme) => ({

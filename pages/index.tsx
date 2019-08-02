@@ -19,7 +19,7 @@ import ICuriosity from 'app/entities/Curiosity';
 import mockCuriosity from 'app/mocks/mockCuriosity';
 
 // Data
-import contentMe from 'content/me';
+import contentMe from 'app/content/me';
 
 // Styles
 const useStyles = makeStyles(({ spacing }: Theme) => ({
