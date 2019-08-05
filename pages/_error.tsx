@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const ErrorPage = ({  }: IErrorPage): JSX.Element => {
+const ErrorPage = ({  }: IErrorPage) => {
   return (
     <Wrapper>
       <h1>404: Page not found</h1>

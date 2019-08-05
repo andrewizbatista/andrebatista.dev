@@ -3,9 +3,7 @@ import Head from 'next/head';
 
 import IPage from 'app/entities/Page';
 
-const MetaTags = ({
-  page: { metaTitle, metaDescription, metaKeywords, metaImage },
-}: IMetaTags): any => {
+const MetaTags = ({ page: { metaTitle, metaDescription, metaKeywords, metaImage } }: IMetaTags) => {
   return (
     <Head>
       <title>{metaTitle}</title>

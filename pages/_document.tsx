@@ -4,7 +4,7 @@ import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheets } from '@material-ui/styles';
 
 class MyDocument extends Document {
-  public render(): JSX.Element {
+  public render() {
     return (
       <Html>
         <Head />
@@ -12,7 +12,6 @@ class MyDocument extends Document {
           href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap"
           rel="stylesheet"
         />
-        <script src="https://cdn.rawgit.com/progers/pathseg/master/pathseg.js" />
         <body>
           <Main />
           <NextScript />
