@@ -10,7 +10,7 @@ const contentMe: IMe = {
     linkedin: 'https://www.linkedin.com/in/andrewizbatista/',
   },
   work: {
-    title: 'React Developer',
+    title: 'Epic React Developer',
     company: 'The Virtual Forge',
     companyUrl: 'https://thevirtualforge.com',
   },
