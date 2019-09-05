@@ -4,19 +4,16 @@ import { Theme } from '@material-ui/core/styles';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 
 // Components
 import PageLayout from 'components/Layout/PageLayout';
 import Socials from 'components/Socials';
-import CuriosityStepper from 'components/CuriosityStepper';
+import About from 'components/About';
 
 // Others
 import IPage from 'app/entities/Page';
 import mockPage from 'app/mocks/mockPage';
 import IMe from 'app/entities/Me';
-import ICuriosity from 'app/entities/Curiosity';
-import mockCuriosity from 'app/mocks/mockCuriosity';
 
 // Data
 import contentMe from 'app/content/me';
@@ -34,11 +31,10 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
   },
 }));
 
-const Homepage = ({ page, me, curiosities }: IHomepage) => {
+const Homepage = ({ page, me }: IHomepage) => {
   const theme = useTheme();
   const classes = useStyles(theme);
-
-  const { name, handler, about, socials, work } = me;
+  const { socials, work } = me;
 
   return (
     <PageLayout page={page}>
@@ -49,14 +45,7 @@ const Homepage = ({ page, me, curiosities }: IHomepage) => {
         alignItems="stretch"
         className={classes.wrapper}>
         <Grid item className={classes.spacingTop}>
-          <Typography variant="h1">{name}</Typography>
-          <Typography variant="h2" color="primary">
-            {handler}
-          </Typography>
-          <Typography variant="caption">{about}</Typography>
-        </Grid>
-        <Grid item>
-          <CuriosityStepper curiosities={curiosities} />
+          <About me={me} />
         </Grid>
         <Grid item className={classes.spacingBottom}>
           <Socials socials={socials} work={work} />
@@ -67,19 +56,15 @@ const Homepage = ({ page, me, curiosities }: IHomepage) => {
 };
 
 Homepage.getInitialProps = async (): Promise<IHomepage> => {
-  // do your queries here and build up all the props the Page will need.
-
   return {
     page: mockPage(1, { metaTitle: 'André Batista' }),
     me: contentMe,
-    curiosities: mockCuriosity(100),
   };
 };
 
 export interface IHomepage {
   page: IPage;
   me: IMe;
-  curiosities: ICuriosity[];
 }
 
 export default Homepage;

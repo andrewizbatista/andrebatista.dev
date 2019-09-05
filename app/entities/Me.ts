@@ -1,5 +1,6 @@
 export default interface IMe {
-  name: string;
+  firstName: string;
+  lastName: string;
   handler: string;
   about: string;
   socials: ISocial;
@@ -10,6 +11,7 @@ export interface ISocial {
   github: string;
   twitter: string;
   linkedin: string;
+  instagram: string;
 }
 
 export interface IWork {
