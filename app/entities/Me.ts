@@ -8,10 +8,10 @@ export default interface IMe {
 }
 
 export interface ISocial {
-  github: string;
-  twitter: string;
-  linkedin: string;
-  instagram: string;
+  github?: string;
+  twitter?: string;
+  linkedin?: string;
+  instagram?: string;
 }
 
 export interface IWork {

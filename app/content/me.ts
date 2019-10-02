@@ -7,7 +7,7 @@ const contentMe: IMe = {
   about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   socials: {
     github: 'https://github.com/andrewizbatista',
-    twitter: 'https://twitter.com/andrewizbatista',
+    // twitter: 'https://twitter.com/andrewizbatista',
     linkedin: 'https://www.linkedin.com/in/andrewizbatista',
     instagram: 'https://www.instagram.com/andrewizbatista',
   },

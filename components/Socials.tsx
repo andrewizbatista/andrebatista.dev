@@ -35,18 +35,26 @@ const Socials = ({ socials, work }: ISocials) => {
   return (
     <Grid container direction="column">
       <Grid item>
-        <Link href={github} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} size="4x" />
-        </Link>
-        <Link href={linkedin} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} size="4x" />
-        </Link>
-        <Link href={twitter} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon className={classes.socialIcon} icon={faTwitter} size="4x" />
-        </Link>
-        <Link href={instagram} target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon className={classes.socialIcon} icon={faInstagram} size="4x" />
-        </Link>
+        {github && (
+          <Link href={github} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} size="4x" />
+          </Link>
+        )}
+        {linkedin && (
+          <Link href={linkedin} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} size="4x" />
+          </Link>
+        )}
+        {twitter && (
+          <Link href={twitter} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={classes.socialIcon} icon={faTwitter} size="4x" />
+          </Link>
+        )}
+        {instagram && (
+          <Link href={instagram} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={classes.socialIcon} icon={faInstagram} size="4x" />
+          </Link>
+        )}
       </Grid>
       <Grid item>
         <Typography>
