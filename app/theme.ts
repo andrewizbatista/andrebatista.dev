@@ -1,29 +1,30 @@
-import { styled } from '@material-ui/styles';
 import { createMuiTheme } from '@material-ui/core/styles';
+
+export const colors: Record<string, string> = {
+  Primary: '#ec4765',
+  Secondary: '#00f99e',
+  Dark: '#333',
+  Light: '#fff',
+  Error: '#ff4400',
+};
 
 export default createMuiTheme({
   palette: {
     type: 'dark',
     background: {
-      default: '#333',
+      default: colors.Dark,
     },
     primary: {
-      main: '#ec4765',
-      // light: will be calculated from palette.primary.main,
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
+      main: colors.Primary,
     },
     secondary: {
-      main: '#ff4400',
-      // light: will be calculated from palette.primary.main,
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
+      main: colors.Secondary,
     },
     error: {
-      main: '#ff4400',
-      // light: will be calculated from palette.primary.main,
-      // dark: will be calculated from palette.primary.main,
-      // contrastText: will be calculated to contrast with palette.primary.main
+      main: colors.Error,
+      // light:
+      // dark:
+      // contrastText:
     },
   },
   typography: {
@@ -45,15 +46,3 @@ export default createMuiTheme({
     },
   },
 });
-
-export const GlobalStyles = styled('div')({
-  height: '100vh',
-  width: '100vw',
-  backgroundImage: 'url(static/andrebatista.png)',
-  backgroundPosition: 'right',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'contain',
-});
-
-// background: rgba(0, 249, 158, 0.99);
-// color: #333;

@@ -8,7 +8,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" rel="stylesheet" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700" />
+        <link rel="stylesheet" href="/static/css/main.css" />
         <body>
           <Main />
           <NextScript />
@@ -18,13 +19,13 @@ class MyDocument extends Document {
   }
 }
 
-MyDocument.getInitialProps = async (ctx: any): Promise<any> => {
+MyDocument.getInitialProps = async (ctx) => {
   const sheets = new ServerStyleSheets();
   const { renderPage } = ctx;
 
-  ctx.renderPage = (): any =>
+  ctx.renderPage = () =>
     renderPage({
-      enhanceApp: (App: any): any => (props: any): any => sheets.collect(<App {...props} />),
+      enhanceApp: (App) => (props) => sheets.collect(<App {...props} />),
     });
 
   const initialProps = await Document.getInitialProps(ctx);

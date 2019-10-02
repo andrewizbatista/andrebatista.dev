@@ -1,0 +1,13 @@
+body {
+  background: #333;
+}
+
+::selection {
+  color: #333;
+  background: rgba(0, 249, 158, 0.99);
+}
+
+::-moz-selection {
+  color: #333;
+  background: rgba(0, 249, 158, 0.99);
+}

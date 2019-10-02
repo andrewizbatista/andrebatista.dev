@@ -1,10 +1,12 @@
+import { colors } from 'app/theme';
+
 const appConfig: IAppConfig = {
   developerSignature: 'André Batista < @andrewizbatista >',
   developerWebsite: 'https://andrebatista.dev',
 
   appName: 'André Batista',
   appWebsite: 'https://andrebatista.dev',
-  appThemeColor: '#8e3545',
+  appThemeColor: colors.Secondary,
   defaultLocale: {
     code: 'en',
     codeRegion: 'en_GB',

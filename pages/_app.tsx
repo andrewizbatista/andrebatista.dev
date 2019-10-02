@@ -1,10 +1,10 @@
 import React, { StrictMode } from 'react';
-import App, { Container } from 'next/app';
+import App from 'next/app';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { ThemeProvider } from '@material-ui/styles';
+import { styled, ThemeProvider } from '@material-ui/styles';
 
-import theme, { GlobalStyles } from 'app/theme';
+import theme from 'app/theme';
 
 class MyApp extends App {
   public render() {
@@ -12,20 +12,18 @@ class MyApp extends App {
 
     return (
       <StrictMode>
-        <GlobalStyles>
+        <ImTheBackground>
           <ThemeProvider theme={theme}>
-            <Container>
-              <CssBaseline />
-              <Component {...pageProps} />
-            </Container>
+            <CssBaseline />
+            <Component {...pageProps} />
           </ThemeProvider>
-        </GlobalStyles>
+        </ImTheBackground>
       </StrictMode>
     );
   }
 }
 
-MyApp.getInitialProps = async ({ Component, ctx }: any): Promise<any> => {
+MyApp.getInitialProps = async ({ Component, ctx }) => {
   let pageProps = {};
 
   if (Component.getInitialProps) {
@@ -34,5 +32,14 @@ MyApp.getInitialProps = async ({ Component, ctx }: any): Promise<any> => {
 
   return { pageProps };
 };
+
+const ImTheBackground = styled('div')({
+  height: '100vh',
+  width: '100vw',
+  backgroundImage: 'url(static/img/andrebatista.png)',
+  backgroundPosition: 'right',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'contain',
+});
 
 export default MyApp;
