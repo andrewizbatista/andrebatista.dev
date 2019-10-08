@@ -4,34 +4,41 @@ import App from 'next/app';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { styled, ThemeProvider } from '@material-ui/styles';
 
-import theme from 'app/theme';
+import { theme } from 'app/theme';
 
 class MyApp extends App {
+  public componentDidMount() {
+    const jssStyles = document.querySelector('#jss-server-side');
+    if (jssStyles && jssStyles.parentNode) {
+      jssStyles.parentNode.removeChild(jssStyles);
+    }
+  }
+
   public render() {
     const { Component, pageProps } = this.props;
 
     return (
       <StrictMode>
-        <ImTheBackground>
-          <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
+          <ImTheBackground>
             <CssBaseline />
             <Component {...pageProps} />
-          </ThemeProvider>
-        </ImTheBackground>
+          </ImTheBackground>
+        </ThemeProvider>
       </StrictMode>
     );
   }
 }
 
-MyApp.getInitialProps = async ({ Component, ctx }) => {
-  let pageProps = {};
+// MyApp.getInitialProps = async ({ Component, ctx }) => {
+//   let pageProps = {};
 
-  if (Component.getInitialProps) {
-    pageProps = await Component.getInitialProps(ctx);
-  }
+//   if (Component.getInitialProps) {
+//     pageProps = await Component.getInitialProps(ctx);
+//   }
 
-  return { pageProps };
-};
+//   return { pageProps };
+// };
 
 const ImTheBackground = styled('div')({
   height: '100vh',

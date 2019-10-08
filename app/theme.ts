@@ -8,7 +8,7 @@ export const colors: Record<string, string> = {
   Error: '#ff4400',
 };
 
-export default createMuiTheme({
+export const theme = createMuiTheme({
   palette: {
     type: 'dark',
     background: {
