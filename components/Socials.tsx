@@ -3,7 +3,7 @@ import { makeStyles, useTheme } from '@material-ui/styles';
 import { Theme } from '@material-ui/core/styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faTwitter, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
@@ -20,16 +20,24 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
     marginBottom: '1rem',
     cursor: 'pointer',
     transition: 'color 0.2s ease',
+    width: '60px !important',
+    height: '60px !important',
     '&:hover': {
       color: palette.primary.light,
     },
+  },
+  iconContainer: {
+    width: '60px !important',
+    height: '60px !important',
+    display: 'inline-block',
+    marginRight: '1rem',
   },
 }));
 
 const Socials = ({ socials, work }: ISocials) => {
   const classes = useStyles(useTheme());
 
-  const { github, twitter, linkedin, instagram } = socials;
+  const { github, linkedin, instagram } = socials;
   const { title, company, companyUrl } = work;
 
   return (
@@ -37,22 +45,23 @@ const Socials = ({ socials, work }: ISocials) => {
       <Grid item>
         {github && (
           <Link href={github} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} size="4x" />
+            <div className={classes.iconContainer}>
+              <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} />
+            </div>
           </Link>
         )}
         {linkedin && (
           <Link href={linkedin} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} size="4x" />
-          </Link>
-        )}
-        {twitter && (
-          <Link href={twitter} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon className={classes.socialIcon} icon={faTwitter} size="4x" />
+            <div className={classes.iconContainer}>
+              <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} />
+            </div>
           </Link>
         )}
         {instagram && (
           <Link href={instagram} target="_blank" rel="noopener noreferrer">
-            <FontAwesomeIcon className={classes.socialIcon} icon={faInstagram} size="4x" />
+            <div className={classes.iconContainer}>
+              <FontAwesomeIcon className={classes.socialIcon} icon={faInstagram} />
+            </div>
           </Link>
         )}
       </Grid>
