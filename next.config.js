@@ -1,46 +1,45 @@
-const fs = require('fs');
-const sitemap = require('nextjs-sitemap-generator');
-const withManifest = require('next-manifest');
-const { promisify } = require('util');
+// const fs = require('fs');
+// const sitemap = require('nextjs-sitemap-generator');
+// const withManifest = require('next-manifest');
+// const { promisify } = require('util');
 
-const copyFile = promisify(fs.copyFile);
+// // const copyFile = promisify(fs.copyFile);
 
-sitemap({
-  baseUrl: 'https://andrebatista.dev',
-  pagesDirectory: __dirname + '/pages',
-  targetDirectory: 'static/',
-  nextConfigPath: __dirname + '/next.config.js',
-});
+// sitemap({
+//   baseUrl: 'https://andrebatista.dev',
+//   pagesDirectory: __dirname + '/pages',
+//   targetDirectory: 'static/',
+//   nextConfigPath: __dirname + '/next.config.js',
+// });
 
-const iconSizes = [36, 48, 72, 96, 144, 192];
+// const iconSizes = [36, 48, 72, 96, 144, 192];
 
-let icons = [];
-iconSizes.forEach((s) => {
-  const sizes = `${s}x${s}`;
-  icons.push({
-    src: `/static/meta/icon-${sizes}.png`,
-    type: 'image/png',
-    sizes,
-  });
-});
+// let icons = [];
+// iconSizes.forEach((s) => {
+//   const sizes = `${s}x${s}`;
+//   icons.push({
+//     src: `/static/meta/icon-${sizes}.png`,
+//     type: 'image/png',
+//     sizes,
+//   });
+// });
 
-const manifest = {
-  output: './static',
-  name: 'André Batista',
-  short_name: 'AB',
-  description: 'André Batista < @andrewizbatista > React Developer & JavaScript Geek',
-  lang: 'en',
-  dir: 'ltr',
-  start_url: '.',
-  display: 'standalone',
-  theme_color: '#00f99e',
-  orientation: 'portrait-primary',
-  background_color: '#333',
-  icons,
-};
+// const manifest = {
+//   output: './static',
+//   name: 'André Batista',
+//   short_name: 'AB',
+//   description: 'André Batista < @andrewizbatista > React Developer & JavaScript Geek',
+//   lang: 'en',
+//   dir: 'ltr',
+//   start_url: '.',
+//   display: 'standalone',
+//   theme_color: '#00f99e',
+//   orientation: 'portrait-primary',
+//   background_color: '#333',
+//   icons,
+// };
 
-module.exports = withManifest({
-  manifest,
+module.exports = {
   webpack: (config) => {
     const entryOriginal = config.entry;
 
@@ -72,4 +71,4 @@ module.exports = withManifest({
 
     return pathMap;
   },
-});
+};
