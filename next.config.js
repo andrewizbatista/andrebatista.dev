@@ -8,7 +8,7 @@ const copyFile = promisify(fs.copyFile);
 sitemap({
   baseUrl: 'https://andrebatista.dev',
   pagesDirectory: __dirname + '/pages',
-  targetDirectory: 'config/meta/',
+  targetDirectory: 'static/',
   nextConfigPath: __dirname + '/next.config.js',
 });
 
@@ -25,7 +25,7 @@ iconSizes.forEach((s) => {
 });
 
 const manifest = {
-  output: './config/meta',
+  output: './static',
   name: 'André Batista',
   short_name: 'AB',
   description: 'André Batista < @andrewizbatista > React Developer & JavaScript Geek',
