@@ -66,9 +66,9 @@ module.exports = withManifest({
 
     // insert code that generates the routes
 
-    await copyFile('config/meta/robots.txt', 'out/robots.txt');
-    await copyFile('config/meta/sitemap.xml', 'out/sitemap.xml');
-    await copyFile('config/meta/manifest.json', 'out/manifest.json');
+    // await copyFile('config/meta/robots.txt', 'out/robots.txt');
+    // await copyFile('config/meta/sitemap.xml', 'out/sitemap.xml');
+    // await copyFile('config/meta/manifest.json', 'out/manifest.json');
 
     return pathMap;
   },

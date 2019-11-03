@@ -1,0 +1,9 @@
+{
+  "name": "andrebatista.dev",
+  "version": 1,
+  "routes": [
+    { "src": "/robots.txt", "dest": "/config/meta/robots.txt" },
+    { "src": "/manifest.json", "dest": "/config/meta/manifest.json" },
+    { "src": "/sitemap.xml", "dest": "/config/meta/sitemap.xml" }
+  ]
+}
