@@ -1,6 +1,12 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
-export const colors: Record<string, string> = {
+export const colors: {
+  Primary: string;
+  Secondary: string;
+  Dark: string;
+  Light: string;
+  Error: string;
+} = {
   Primary: '#ec4765',
   Secondary: '#00f99e',
   Dark: '#333',

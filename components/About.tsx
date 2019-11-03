@@ -1,6 +1,6 @@
 import React from 'react';
-// import { makeStyles, useTheme } from '@material-ui/styles';
-// import { Theme } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/styles';
+import { Theme } from '@material-ui/core/styles';
 
 // Mui
 // import Grid from '@material-ui/core/Grid';
@@ -10,10 +10,14 @@ import Typography from '@material-ui/core/Typography';
 import IMe from 'app/entities/Me';
 
 // Styles
-// const useStyles = makeStyles(({  }: Theme) => ({}));
+const useStyles = makeStyles(({  }: Theme) => ({
+  handler: {
+    paddingTop: '1rem',
+  },
+}));
 
 const About = ({ me }: IAbout) => {
-  // const classes = useStyles(useTheme());
+  const classes = useStyles(useTheme());
 
   const { firstName, lastName, handler } = me;
 
@@ -24,8 +28,8 @@ const About = ({ me }: IAbout) => {
         <br />
         {lastName}
       </Typography>
-      <Typography variant="h2" color="primary">
-        {handler}
+      <Typography variant="h2" color="primary" className={classes.handler}>
+        {` ${handler}`}
       </Typography>
     </>
   );

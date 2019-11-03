@@ -12,11 +12,12 @@ import About from 'components/About';
 
 // Others
 import IPage from 'app/entities/Page';
-import mockPage from 'app/mocks/mockPage';
+// import mockPage from 'app/mocks/mockPage';
 import IMe from 'app/entities/Me';
 
 // Data
 import contentMe from 'app/content/me';
+import contentPage from 'app/content/page';
 
 // Styles
 const useStyles = makeStyles(({ spacing }: Theme) => ({
@@ -57,7 +58,7 @@ const Homepage = ({ page, me }: IHomepage) => {
 
 Homepage.getInitialProps = async (): Promise<IHomepage> => {
   return {
-    page: mockPage(1, { metaTitle: 'André Batista' }),
+    page: contentPage,
     me: contentMe,
   };
 };

@@ -4,7 +4,6 @@ import { Theme } from '@material-ui/core/styles';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
-import Container from '@material-ui/core/Container';
 
 // Components
 import MetaTags from 'components/Core/MetaTags';
@@ -28,6 +27,7 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
   content: {
     boxShadow: '-5px 0px 3px 0px rgba(0,0,0,0.5)',
     height: '100vh',
+    paddingLeft: '2rem',
   },
 }));
 
@@ -42,7 +42,7 @@ const PageLayout = ({ page, children }: IPageLayout) => {
           <ParticlesSidebar particles={contentParticles} />
         </Grid>
         <Grid item xs={12} sm={9} lg={10} className={classes.content}>
-          <Container>{children}</Container>
+          {children}
         </Grid>
       </Grid>
     </>
