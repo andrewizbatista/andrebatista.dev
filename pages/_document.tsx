@@ -5,6 +5,17 @@ import { ServerStyleSheets } from '@material-ui/styles';
 import appConfig from 'app/config';
 
 class MyDocument extends Document {
+  // eslint-disable-next-line class-methods-use-this
+  public setGoogleAnalytics() {
+    return {
+      __html: `
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-151404517-1');`,
+    };
+  }
+
   public render() {
     return (
       <Html lang={appConfig.defaultLocale.code}>
@@ -25,6 +36,8 @@ class MyDocument extends Document {
           />
           <link rel="stylesheet" href="/static/css/main.css" />
           <link rel="icon" type="image/png" sizes="192x192" href="/static/meta/icon-192x192.png" />
+          {/* eslint-disable-next-line react/no-danger */}
+          <script dangerouslySetInnerHTML={this.setGoogleAnalytics()} />
         </Head>
         <body>
           <Main />
