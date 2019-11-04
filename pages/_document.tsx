@@ -30,12 +30,19 @@ class MyDocument extends Document {
           <meta name="robots" content="index,follow" />
           <link rel="manifest" href="/manifest.json" />
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+          <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+          <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700"
           />
           <link rel="stylesheet" href="/static/css/main.css" />
           <link rel="icon" type="image/png" sizes="192x192" href="/static/meta/icon-192x192.png" />
+          <script
+            async
+            type="text/javascript"
+            src="https://www.googletagmanager.com/gtag/js?id=UA-151404517-1"
+          />
           {/* eslint-disable-next-line react/no-danger */}
           <script dangerouslySetInnerHTML={this.setGoogleAnalytics()} />
         </Head>
