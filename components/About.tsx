@@ -68,7 +68,7 @@ const About = ({ me }: IAbout) => {
         src="/static/img/andrewizbatista.png"
         alt="André Batista"
         className={classes.myPhoto}
-        style={{ opacity: showPhoto ? 0.2 : 0 }}
+        style={{ opacity: showPhoto ? 0.3 : 0 }}
       />
     </>
   );

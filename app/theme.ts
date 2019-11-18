@@ -10,7 +10,7 @@ export const colors: {
   Error: string;
 } = {
   Primary: '#14ce78',
-  Secondary: '#00f99e',
+  Secondary: '#14ce78',
   Dark: '#333',
   Light: '#fff',
   Error: '#ff4400',
