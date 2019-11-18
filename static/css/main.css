@@ -1,13 +1,18 @@
-body {
-  background: #333;
-}
-
 ::selection {
-  color: #333;
-  background: rgba(0, 249, 158, 0.99);
+  color: #fff;
+  background: rgba(206, 20, 64, 0.99);
 }
 
 ::-moz-selection {
-  color: #333;
-  background: rgba(0, 249, 158, 0.99);
+  color: #fff;
+  background: rgba(206, 20, 64, 0.99);
+}
+
+body {
+  background: #212121;
+  background-image: url('/static/img/galaxy.jpg');
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center;
 }
