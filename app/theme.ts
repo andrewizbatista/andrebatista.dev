@@ -1,5 +1,7 @@
 import { createMuiTheme } from '@material-ui/core/styles';
 
+const muiTheme = createMuiTheme();
+
 export const colors: {
   Primary: string;
   Secondary: string;
@@ -7,7 +9,7 @@ export const colors: {
   Light: string;
   Error: string;
 } = {
-  Primary: '#ec4765',
+  Primary: '#14ce78',
   Secondary: '#00f99e',
   Dark: '#333',
   Light: '#fff',
@@ -35,15 +37,35 @@ export const theme = createMuiTheme({
   },
   typography: {
     h1: {
-      fontSize: '8rem',
+      fontSize: '10rem',
       fontWeight: 'bold',
+      letterSpacing: '2px',
+      fontFamily: ['Barlow Semi Condensed', 'monospace'].join(','),
+      [muiTheme.breakpoints.down('xs')]: {
+        fontSize: '4.5rem',
+      },
     },
     h2: {
       fontSize: '2rem',
       fontWeight: 'normal',
       letterSpacing: '-1px',
+      [muiTheme.breakpoints.down('xs')]: {
+        fontSize: '1.5rem',
+      },
     },
-    fontFamily: ['Roboto Mono', 'monospace'].join(','),
+    subtitle1: {
+      fontSize: '1.2rem',
+      [muiTheme.breakpoints.down('xs')]: {
+        fontSize: '0.8rem',
+      },
+    },
+    subtitle2: {
+      fontSize: '1rem',
+      [muiTheme.breakpoints.down('xs')]: {
+        fontSize: '0.8rem',
+      },
+    },
+    fontFamily: ['Share Tech Mono', 'monospace'].join(','),
   },
   overrides: {},
   props: {

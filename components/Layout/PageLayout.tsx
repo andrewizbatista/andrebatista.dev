@@ -4,6 +4,7 @@ import { Theme } from '@material-ui/core/styles';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 // Components
 import MetaTags from 'components/Core/MetaTags';
@@ -16,9 +17,9 @@ import IPage from 'app/entities/Page';
 import contentParticles from 'app/content/particles';
 
 // Styles
-const useStyles = makeStyles(({ palette }: Theme) => ({
+const useStyles = makeStyles(({ breakpoints }: Theme) => ({
   sidebar: {
-    backgroundColor: palette.primary.dark,
+    backgroundColor: 'rgba(0,0,0,0.5)',
     height: '100vh',
     '& div': {
       height: '99%',
@@ -28,6 +29,9 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
     boxShadow: '-5px 0px 3px 0px rgba(0,0,0,0.5)',
     height: '100vh',
     paddingLeft: '2rem',
+    [breakpoints.down('xs')]: {
+      paddingLeft: '1rem',
+    },
   },
 }));
 
@@ -38,9 +42,11 @@ const PageLayout = ({ page, children }: IPageLayout) => {
     <>
       <MetaTags page={page} />
       <Grid container direction="row" justify="space-between" alignItems="stretch">
-        <Grid item xs={12} sm={3} lg={2} className={classes.sidebar}>
-          <ParticlesSidebar particles={contentParticles} />
-        </Grid>
+        <Hidden smDown>
+          <Grid item xs={12} sm={3} lg={2} className={classes.sidebar}>
+            <ParticlesSidebar particles={contentParticles} />
+          </Grid>
+        </Hidden>
         <Grid item xs={12} sm={9} lg={10} className={classes.content}>
           {children}
         </Grid>

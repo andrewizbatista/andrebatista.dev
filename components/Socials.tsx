@@ -15,13 +15,16 @@ import { ISocial, IWork } from 'app/entities/Me';
 
 // Styles
 const useStyles = makeStyles(({ palette }: Theme) => ({
+  wrapper: {
+    zIndex: 100,
+  },
   socialIcon: {
     marginRight: '1rem',
     marginBottom: '1rem',
     cursor: 'pointer',
-    transition: 'color 0.2s ease',
     width: '60px !important',
     height: '60px !important',
+    transition: 'color 0.2s ease',
     '&:hover': {
       color: palette.primary.light,
     },
@@ -32,6 +35,16 @@ const useStyles = makeStyles(({ palette }: Theme) => ({
     display: 'inline-block',
     marginRight: '1rem',
   },
+  location: {
+    opacity: 0.6,
+  },
+  company: {
+    transition: 'color 0.2s ease',
+    '&:hover': {
+      textDecoration: 'none',
+      color: palette.primary.light,
+    },
+  },
 }));
 
 const Socials = ({ socials, work }: ISocials) => {
@@ -41,7 +54,7 @@ const Socials = ({ socials, work }: ISocials) => {
   const { title, company, companyUrl } = work;
 
   return (
-    <Grid container direction="column">
+    <Grid container direction="column" className={classes.wrapper}>
       <Grid item>
         {github && (
           <Link href={github} target="_blank" rel="noopener noreferrer">
@@ -66,13 +79,19 @@ const Socials = ({ socials, work }: ISocials) => {
         )}
       </Grid>
       <Grid item>
-        <Typography>
+        <Typography variant="subtitle1">
           {`${title} @ `}
-          <Link href={companyUrl} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={companyUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classes.company}>
             {company}
           </Link>
         </Typography>
-        <Typography variant="caption">Lisbon, Portugal</Typography>
+        <Typography variant="subtitle2" className={classes.location}>
+          Lisbon, Portugal
+        </Typography>
       </Grid>
     </Grid>
   );

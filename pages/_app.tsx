@@ -2,7 +2,7 @@ import React, { StrictMode } from 'react';
 import App from 'next/app';
 
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { styled, ThemeProvider } from '@material-ui/styles';
+import { ThemeProvider } from '@material-ui/styles';
 
 import { theme } from 'app/theme';
 
@@ -20,10 +20,10 @@ class MyApp extends App {
     return (
       <StrictMode>
         <ThemeProvider theme={theme}>
-          <ImTheBackground>
-            <CssBaseline />
-            <Component {...pageProps} />
-          </ImTheBackground>
+          {/* <ImTheBackground> */}
+          <CssBaseline />
+          <Component {...pageProps} />
+          {/* </ImTheBackground> */}
         </ThemeProvider>
       </StrictMode>
     );
@@ -40,13 +40,13 @@ class MyApp extends App {
 //   return { pageProps };
 // };
 
-const ImTheBackground = styled('div')({
-  height: '100vh',
-  width: '100vw',
-  backgroundImage: 'url(static/img/andrebatista.png)',
-  backgroundPosition: 'right',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'contain',
-});
+// const ImTheBackground = styled('div')({
+//   height: '100vh',
+//   width: '100vw',
+//   backgroundImage: 'url(static/img/andrebatista.png)',
+//   backgroundPosition: 'right',
+//   backgroundRepeat: 'no-repeat',
+//   backgroundSize: 'contain',
+// });
 
 export default MyApp;
