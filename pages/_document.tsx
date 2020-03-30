@@ -22,8 +22,14 @@ class MyDocument extends Document {
         <Head>
           <meta charSet="utf-8" />
           <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
-          <meta httpEquiv="Content-Language" content={appConfig.defaultLocale.code} />
-          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+          <meta
+            httpEquiv="Content-Language"
+            content={appConfig.defaultLocale.code}
+          />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
+          />
           <meta name="language" content={appConfig.defaultLocale.code} />
           <meta name="reference" content={appConfig.appName} />
           <meta name="theme-color" content={appConfig.appThemeColor} />
@@ -37,7 +43,12 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:400,700|Share+Tech+Mono:400,700|Inconsolata:400,700"
           />
           <link rel="stylesheet" href="/static/css/main.css" />
-          <link rel="icon" type="image/png" sizes="192x192" href="/static/meta/icon-192x192.png" />
+          <link
+            rel="icon"
+            type="image/png"
+            sizes="192x192"
+            href="/static/meta/icon-192x192.png"
+          />
           <script
             async
             type="text/javascript"
@@ -68,7 +79,10 @@ MyDocument.getInitialProps = async (ctx) => {
 
   return {
     ...initialProps,
-    styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
+    styles: [
+      ...React.Children.toArray(initialProps.styles),
+      sheets.getStyleElement(),
+    ],
   };
 };
 

@@ -41,7 +41,11 @@ const PageLayout = ({ page, children }: IPageLayout) => {
   return (
     <>
       <MetaTags page={page} />
-      <Grid container direction="row" justify="space-between" alignItems="stretch">
+      <Grid
+        container
+        direction="row"
+        justify="space-between"
+        alignItems="stretch">
         <Hidden smDown>
           <Grid item xs={12} sm={3} lg={2} className={classes.sidebar}>
             <ParticlesSidebar particles={contentParticles} />

@@ -3,7 +3,11 @@ import { makeStyles, useTheme } from '@material-ui/styles';
 import { Theme } from '@material-ui/core/styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
+import {
+  faGithub,
+  faLinkedin,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
@@ -66,14 +70,20 @@ const Socials = ({ socials, work }: ISocials) => {
         {linkedin && (
           <Link href={linkedin} target="_blank" rel="noopener noreferrer">
             <div className={classes.iconContainer}>
-              <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} />
+              <FontAwesomeIcon
+                className={classes.socialIcon}
+                icon={faLinkedin}
+              />
             </div>
           </Link>
         )}
         {instagram && (
           <Link href={instagram} target="_blank" rel="noopener noreferrer">
             <div className={classes.iconContainer}>
-              <FontAwesomeIcon className={classes.socialIcon} icon={faInstagram} />
+              <FontAwesomeIcon
+                className={classes.socialIcon}
+                icon={faInstagram}
+              />
             </div>
           </Link>
         )}
