@@ -5,13 +5,12 @@ import { Theme } from '@material-ui/core/styles';
 // Mui
 // import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
 
 // Others
 import IMe from 'app/entities/Me';
 
 // Styles
-const useStyles = makeStyles(({  }: Theme) => ({
+const useStyles = makeStyles(({}: Theme) => ({
   myUsername: {
     paddingTop: '1rem',
     paddingLeft: '0.5rem',
