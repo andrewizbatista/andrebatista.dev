@@ -1,20 +1,20 @@
-export default interface IMe {
+interface Me {
   firstName: string;
   lastName: string;
   handler: string;
   about: string;
-  socials: ISocial;
-  work: IWork;
+  socials: Socials;
+  work: Work;
 }
 
-export interface ISocial {
+interface Socials {
   github?: string;
   twitter?: string;
   linkedin?: string;
   instagram?: string;
 }
 
-export interface IWork {
+interface Work {
   title: string;
   company: string;
   companyUrl: string;

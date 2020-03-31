@@ -1,7 +1,6 @@
-import IPage from 'app/entities/Page';
 import appConfig from 'app/config';
 
-const contentPage: IPage = {
+const contentPage: Page = {
   url: 'https://andrebatista.dev/',
   metaTitle: 'André Batista',
   metaDescription: 'React Developer & JavaScript Geek < @andrewizbatista >',

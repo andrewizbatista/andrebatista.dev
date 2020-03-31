@@ -1,6 +1,6 @@
 import { colors } from 'app/theme';
 
-const appConfig: IAppConfig = {
+const appConfig: AppConfig = {
   developerSignature: 'André Batista < @andrewizbatista >',
   developerWebsite: 'https://andrebatista.dev',
 
@@ -16,20 +16,3 @@ const appConfig: IAppConfig = {
 };
 
 export default appConfig;
-
-export interface IAppConfig {
-  developerSignature: string;
-  developerWebsite: string;
-
-  appName: string;
-  appWebsite: string;
-  appThemeColor: string;
-  defaultLocale: ILocale;
-  availableLocales?: ILocale[];
-}
-
-export interface ILocale {
-  code: string;
-  codeRegion: string;
-  name: string;
-}

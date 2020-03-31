@@ -1,10 +1,8 @@
-import { ILocale } from 'app/config';
-
-export default interface IPage {
+interface Page {
   url: string;
   metaTitle: string;
   metaDescription: string;
   metaKeywords: string;
   metaImage: string;
-  locale: ILocale;
+  locale: Locale;
 }

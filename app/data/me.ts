@@ -1,10 +1,9 @@
-import IMe from 'app/entities/Me';
-
-const contentMe: IMe = {
+const contentMe: Me = {
   firstName: 'André',
   lastName: 'Batista',
   handler: '@andrewizbatista',
-  about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+  about:
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
   socials: {
     github: 'https://github.com/andrewizbatista',
     // twitter: 'https://twitter.com/andrewizbatista',
