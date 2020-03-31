@@ -46,7 +46,7 @@ export const theme = createMuiTheme({
       },
     },
     h2: {
-      fontSize: '1.6rem',
+      fontSize: '1.4rem',
       fontWeight: 'normal',
       letterSpacing: '-1px',
       [muiTheme.breakpoints.down('xs')]: {
