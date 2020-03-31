@@ -1,45 +1,13 @@
 import React, { useState } from 'react';
-import { makeStyles, useTheme } from '@material-ui/styles';
-import { Theme } from '@material-ui/core/styles';
 
 // Mui
-// import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 // Others
-import IMe from 'app/entities/Me';
+import useStyles from './styles';
 
-// Styles
-const useStyles = makeStyles(({}: Theme) => ({
-  myUsername: {
-    paddingTop: '1rem',
-    paddingLeft: '0.5rem',
-    cursor: 'default',
-    zIndex: 100,
-  },
-  myName: {
-    cursor: 'default',
-    opacity: 0.6,
-    transition: 'opacity 0.5s ease-out',
-    '&:hover': {
-      opacity: 1,
-    },
-    zIndex: 100,
-  },
-  myPhoto: {
-    position: 'absolute',
-    width: 'auto',
-    height: 'auto',
-    right: 0,
-    bottom: 0,
-    opacity: 0,
-    transition: 'opacity 0.4s ease-out',
-    zIndex: -1,
-  },
-}));
-
-const About = ({ me }: IAbout) => {
-  const classes = useStyles(useTheme());
+const About = ({ me }: AboutProps) => {
+  const classes = useStyles();
 
   const { firstName, lastName, handler } = me;
 
@@ -73,8 +41,8 @@ const About = ({ me }: IAbout) => {
   );
 };
 
-export interface IAbout {
-  me: IMe;
+export interface AboutProps {
+  me: Me;
 }
 
 export default About;

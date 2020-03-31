@@ -1,7 +1,11 @@
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/styles';
-import { Theme } from '@material-ui/core/styles';
 
+// Mui
+import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
+
+// Assets
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -9,50 +13,11 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-// Mui
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
-
 // Others
-import { ISocial, IWork } from 'app/entities/Me';
+import useStyles from './styles';
 
-// Styles
-const useStyles = makeStyles(({ palette }: Theme) => ({
-  wrapper: {
-    zIndex: 100,
-  },
-  socialIcon: {
-    marginRight: '1rem',
-    marginBottom: '1rem',
-    cursor: 'pointer',
-    width: '60px !important',
-    height: '60px !important',
-    transition: 'color 0.2s ease',
-    '&:hover': {
-      color: palette.primary.light,
-    },
-  },
-  iconContainer: {
-    width: '60px !important',
-    height: '60px !important',
-    display: 'inline-block',
-    marginRight: '1rem',
-  },
-  location: {
-    opacity: 0.6,
-  },
-  company: {
-    transition: 'color 0.2s ease',
-    '&:hover': {
-      textDecoration: 'none',
-      color: palette.primary.light,
-    },
-  },
-}));
-
-const Socials = ({ socials, work }: ISocials) => {
-  const classes = useStyles(useTheme());
+const Socials = ({ socials, work }: SocialsProps) => {
+  const classes = useStyles();
 
   const { github, linkedin, instagram } = socials;
   const { title, company, companyUrl } = work;
@@ -107,9 +72,9 @@ const Socials = ({ socials, work }: ISocials) => {
   );
 };
 
-export interface ISocials {
-  socials: ISocial;
-  work: IWork;
+export interface SocialsProps {
+  socials: Socials;
+  work: Work;
 }
 
 export default Socials;

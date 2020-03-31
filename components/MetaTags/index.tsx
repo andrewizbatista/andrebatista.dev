@@ -1,11 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-import IPage from 'app/entities/Page';
-
 const MetaTags = ({
   page: { metaTitle, metaDescription, metaKeywords, metaImage },
-}: IMetaTags) => {
+}: MetaTagsProps) => {
   return (
     <Head>
       <title>{metaTitle}</title>
@@ -20,8 +18,8 @@ const MetaTags = ({
   );
 };
 
-interface IMetaTags {
-  page: IPage;
+export interface MetaTagsProps {
+  page: Page;
 }
 
 export default MetaTags;

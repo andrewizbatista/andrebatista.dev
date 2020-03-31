@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@material-ui/styles';
 
-const ErrorPage = ({}: IErrorPage) => {
+const ErrorPage = ({}: ErrorPageProps) => {
   return (
     <Wrapper>
       <h1>404: Page not found</h1>
@@ -9,7 +9,7 @@ const ErrorPage = ({}: IErrorPage) => {
   );
 };
 
-export interface IErrorPage {}
+export interface ErrorPageProps {}
 
 export default ErrorPage;
 

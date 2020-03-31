@@ -6,18 +6,13 @@ import { Theme } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 // Components
-import PageLayout from 'components/Layout/PageLayout';
+import PageLayout from 'components/PageLayout';
 import Socials from 'components/Socials';
 import About from 'components/About';
 
-// Others
-import IPage from 'app/entities/Page';
-// import mockPage from 'app/mocks/mockPage';
-import IMe from 'app/entities/Me';
-
 // Data
-import contentMe from 'app/content/me';
-import contentPage from 'app/content/page';
+import dataMe from 'app/data/me';
+import dataPage from 'app/data/page';
 
 // Styles
 const useStyles = makeStyles(({ spacing }: Theme) => ({
@@ -32,7 +27,7 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
   },
 }));
 
-const Homepage = ({ page, me }: IHomepage) => {
+const HomePage = ({ page, me }: HomePageProps) => {
   const theme = useTheme();
   const classes = useStyles(theme);
   const { socials, work } = me;
@@ -56,16 +51,16 @@ const Homepage = ({ page, me }: IHomepage) => {
   );
 };
 
-Homepage.getInitialProps = async (): Promise<IHomepage> => {
+HomePage.getInitialProps = async (): Promise<HomePageProps> => {
   return {
-    page: contentPage,
-    me: contentMe,
+    page: dataPage,
+    me: dataMe,
   };
 };
 
-export interface IHomepage {
-  page: IPage;
-  me: IMe;
+export interface HomePageProps {
+  page: Page;
+  me: Me;
 }
 
-export default Homepage;
+export default HomePage;

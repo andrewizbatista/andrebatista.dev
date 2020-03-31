@@ -30,23 +30,4 @@ class MyApp extends App {
   }
 }
 
-// MyApp.getInitialProps = async ({ Component, ctx }) => {
-//   let pageProps = {};
-
-//   if (Component.getInitialProps) {
-//     pageProps = await Component.getInitialProps(ctx);
-//   }
-
-//   return { pageProps };
-// };
-
-// const ImTheBackground = styled('div')({
-//   height: '100vh',
-//   width: '100vw',
-//   backgroundImage: 'url(static/img/andrebatista.png)',
-//   backgroundPosition: 'right',
-//   backgroundRepeat: 'no-repeat',
-//   backgroundSize: 'contain',
-// });
-
 export default MyApp;
