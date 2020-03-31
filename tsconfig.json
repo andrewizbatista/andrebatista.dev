@@ -8,6 +8,9 @@
     "baseUrl": ".",
     "charset": "utf-8",
     "checkJs": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
     "jsx": "preserve",
     "jsxFactory": "React.createElement",
     "lib": ["dom", "es2017"],
@@ -31,9 +34,7 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": true,
     "target": "esnext",
-    "forceConsistentCasingInFileNames": true,
-    "esModuleInterop": true,
-    "isolatedModules": true
+    "typeRoots": ["./types/*"]
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
