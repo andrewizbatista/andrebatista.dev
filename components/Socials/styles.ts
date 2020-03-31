@@ -5,27 +5,23 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 
+const iconSize = '2rem !important';
+
 const styles = makeStyles(({ palette }: Theme) =>
   createStyles({
     wrapper: {
       zIndex: 100,
     },
     socialIcon: {
-      marginRight: '1rem',
-      marginBottom: '1rem',
+      marginRight: '0.5rem',
+      marginBottom: '0.2rem',
       cursor: 'pointer',
-      width: '60px !important',
-      height: '60px !important',
+      width: iconSize,
+      height: iconSize,
       transition: 'color 0.2s ease',
       '&:hover': {
         color: palette.primary.light,
       },
-    },
-    iconContainer: {
-      width: '60px !important',
-      height: '60px !important',
-      display: 'inline-block',
-      marginRight: '1rem',
     },
     location: {
       opacity: 0.6,

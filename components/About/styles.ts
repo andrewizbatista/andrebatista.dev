@@ -8,8 +8,7 @@ import {
 const styles = makeStyles(({}: Theme) =>
   createStyles({
     myUsername: {
-      paddingTop: '1rem',
-      paddingLeft: '0.5rem',
+      paddingLeft: '0.2rem',
       cursor: 'default',
       zIndex: 100,
     },

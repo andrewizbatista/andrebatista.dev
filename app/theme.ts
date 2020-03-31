@@ -37,7 +37,7 @@ export const theme = createMuiTheme({
   },
   typography: {
     h1: {
-      fontSize: '10rem',
+      fontSize: '6rem',
       fontWeight: 'bold',
       letterSpacing: '2px',
       fontFamily: ['Barlow Semi Condensed', 'monospace'].join(','),
@@ -46,7 +46,7 @@ export const theme = createMuiTheme({
       },
     },
     h2: {
-      fontSize: '2rem',
+      fontSize: '1.6rem',
       fontWeight: 'normal',
       letterSpacing: '-1px',
       [muiTheme.breakpoints.down('xs')]: {
@@ -54,20 +54,26 @@ export const theme = createMuiTheme({
       },
     },
     subtitle1: {
-      fontSize: '1.2rem',
+      fontSize: '1rem',
       [muiTheme.breakpoints.down('xs')]: {
         fontSize: '0.8rem',
       },
     },
     subtitle2: {
-      fontSize: '1rem',
+      fontSize: '0.8rem',
       [muiTheme.breakpoints.down('xs')]: {
         fontSize: '0.8rem',
       },
     },
     fontFamily: ['Share Tech Mono', 'monospace'].join(','),
   },
-  overrides: {},
+  overrides: {
+    MuiTab: {
+      root: {
+        minWidth: 'auto !important',
+      },
+    },
+  },
   props: {
     MuiButtonBase: {
       disableRipple: true,

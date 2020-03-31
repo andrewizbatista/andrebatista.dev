@@ -23,13 +23,12 @@ const About = ({ me }: AboutProps) => {
         onMouseEnter={showDezze}
         onMouseLeave={hideDezze}
         onTouchStart={showDezze}
-        onTouchEnd={hideDezze}>
-        {firstName}
-        <br />
-        {lastName}
+        onTouchEnd={hideDezze}
+      >
+        {`${firstName} ${lastName}`}
       </Typography>
       <Typography variant="h2" color="primary" className={classes.myUsername}>
-        {` ${handler}`}
+        {handler}
       </Typography>
       <img
         src="/static/img/andrewizbatista.png"

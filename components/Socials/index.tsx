@@ -27,29 +27,20 @@ const Socials = ({ socials, work }: SocialsProps) => {
       <Grid item>
         {github && (
           <Link href={github} target="_blank" rel="noopener noreferrer">
-            <div className={classes.iconContainer}>
-              <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} />
-            </div>
+            <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} />
           </Link>
         )}
         {linkedin && (
           <Link href={linkedin} target="_blank" rel="noopener noreferrer">
-            <div className={classes.iconContainer}>
-              <FontAwesomeIcon
-                className={classes.socialIcon}
-                icon={faLinkedin}
-              />
-            </div>
+            <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} />
           </Link>
         )}
         {instagram && (
           <Link href={instagram} target="_blank" rel="noopener noreferrer">
-            <div className={classes.iconContainer}>
-              <FontAwesomeIcon
-                className={classes.socialIcon}
-                icon={faInstagram}
-              />
-            </div>
+            <FontAwesomeIcon
+              className={classes.socialIcon}
+              icon={faInstagram}
+            />
           </Link>
         )}
       </Grid>
