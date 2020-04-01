@@ -3,6 +3,9 @@ interface Me {
   lastName: string;
   handler: string;
   about: string;
+  games: string[];
+  shows: string[];
+  music: string[];
   socials: Socials;
   work: Work;
 }
@@ -12,6 +15,7 @@ interface Socials {
   twitter?: string;
   linkedin?: string;
   instagram?: string;
+  spotify?: string;
 }
 
 interface Work {

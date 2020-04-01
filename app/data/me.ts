@@ -1,14 +1,55 @@
-const contentMe: Me = {
+const dataMe: Me = {
   firstName: 'André',
   lastName: 'Batista',
   handler: '@andrewizbatista',
   about:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.',
+    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+  games: [
+    'Kenshi',
+    'Rimworld',
+    'Mount & Blade',
+    'Age of Empires',
+    'Starcraft',
+    'Star Citizen',
+    'Counter-Strike',
+    'Dungeon Siege',
+    'Guild Wars',
+    'Freelancer',
+  ],
+  shows: [
+    'Archer',
+    'Rick and Morty',
+    'Game of Thrones',
+    'Westworld',
+    'Breaking Bad',
+    'Parks and Recreation',
+    'Community',
+  ],
+  music: [
+    'Eletronic',
+    'Wave',
+    'Tecnho',
+    'Synthwave',
+    'Psy Trance',
+    'Drum & Bass',
+    'Industrial',
+    'Hip Hop',
+    'Acid Rock',
+    'Gothic Rock',
+    'IBM',
+    'Nu Metal',
+    'Deathcore',
+    'Heavy Metal',
+    'Trip Hop',
+    'Jazz',
+    'Swing',
+  ],
   socials: {
     github: 'https://github.com/andrewizbatista',
-    // twitter: 'https://twitter.com/andrewizbatista',
+    twitter: 'https://twitter.com/andrewizbatista',
     linkedin: 'https://www.linkedin.com/in/andrewizbatista',
     instagram: 'https://www.instagram.com/andrewizbatista',
+    spotify: 'https://open.spotify.com/user/b1ni295n7z73k4dsj1cfz7jt7',
   },
   work: {
     title: 'React Developer',
@@ -17,4 +58,4 @@ const contentMe: Me = {
   },
 };
 
-export default contentMe;
+export default dataMe;

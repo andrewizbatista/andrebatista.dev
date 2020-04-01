@@ -11,6 +11,7 @@ import {
   faGithub,
   faLinkedin,
   faInstagram,
+  faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
 
 // Others
@@ -19,7 +20,7 @@ import useStyles from './styles';
 const Socials = ({ socials, work }: SocialsProps) => {
   const classes = useStyles();
 
-  const { github, linkedin, instagram } = socials;
+  const { github, linkedin, instagram, spotify } = socials;
   const { title, company, companyUrl } = work;
 
   return (
@@ -43,6 +44,11 @@ const Socials = ({ socials, work }: SocialsProps) => {
             />
           </Link>
         )}
+        {spotify && (
+          <Link href={spotify} target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon className={classes.socialIcon} icon={faSpotify} />
+          </Link>
+        )}
       </Grid>
       <Grid item>
         <Typography variant="subtitle1">
@@ -51,7 +57,8 @@ const Socials = ({ socials, work }: SocialsProps) => {
             href={companyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={classes.company}>
+            className={classes.company}
+          >
             {company}
           </Link>
         </Typography>

@@ -8,14 +8,14 @@ import {
 const styles = makeStyles(({ breakpoints }: Theme) =>
   createStyles({
     sidebar: {
-      backgroundColor: 'rgba(0,0,0,0.5)',
+      backgroundColor: 'rgba(0,0,0,0.25)',
       height: '100vh',
       '& div': {
-        height: '99%',
+        height: '100%',
       },
     },
     content: {
-      boxShadow: '-5px 0px 3px 0px rgba(0,0,0,0.5)',
+      boxShadow: '-5px 0px 3px 0px rgba(0,0,0,0.25)',
       height: '100vh',
       paddingLeft: '2rem',
       [breakpoints.down('xs')]: {

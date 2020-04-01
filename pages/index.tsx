@@ -8,7 +8,8 @@ import Grid from '@material-ui/core/Grid';
 // Components
 import PageLayout from 'components/PageLayout';
 import Socials from 'components/Socials';
-import About from 'components/About';
+import Header from 'components/Header';
+import TabsMenu from 'components/TabsMenu';
 
 // Data
 import dataMe from 'app/data/me';
@@ -39,10 +40,13 @@ const HomePage = ({ page, me }: HomePageProps) => {
         direction="column"
         justify="space-between"
         alignItems="stretch"
-        className={classes.wrapper}>
+        className={classes.wrapper}
+      >
         <Grid item className={classes.spacingTop}>
-          <About me={me} />
+          <Header me={me} />
+          <TabsMenu />
         </Grid>
+
         <Grid item className={classes.spacingBottom}>
           <Socials socials={socials} work={work} />
         </Grid>

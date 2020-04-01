@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 // Others
 import useStyles from './styles';
 
-const About = ({ me }: AboutProps) => {
+const Header = ({ me }: HeaderProps) => {
   const classes = useStyles();
 
   const { firstName, lastName, handler } = me;
@@ -40,8 +40,8 @@ const About = ({ me }: AboutProps) => {
   );
 };
 
-export interface AboutProps {
+export interface HeaderProps {
   me: Me;
 }
 
-export default About;
+export default Header;

@@ -1,16 +1,16 @@
 /* eslint-disable @typescript-eslint/camelcase */
 import { IParticlesParams } from 'react-particles-js';
 
-const contentParticles: IParticlesParams = {
+const dataParticles: IParticlesParams = {
   particles: {
     number: {
-      value: 80,
+      value: 50,
     },
     size: {
-      value: 3,
+      value: 2,
     },
     shape: {
-      type: 'circle',
+      type: 'edge',
     },
     opacity: {
       value: 0.8,
@@ -39,4 +39,4 @@ const contentParticles: IParticlesParams = {
   // fps_limit: 60
 };
 
-export default contentParticles;
+export default dataParticles;

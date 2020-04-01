@@ -1,6 +1,6 @@
 import appConfig from 'app/config';
 
-const contentPage: Page = {
+const dataPage: Page = {
   url: 'https://andrebatista.dev/',
   metaTitle: 'André Batista',
   metaDescription: 'React Developer & JavaScript Geek < @andrewizbatista >',
@@ -10,4 +10,4 @@ const contentPage: Page = {
   locale: appConfig.defaultLocale,
 };
 
-export default contentPage;
+export default dataPage;

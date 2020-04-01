@@ -73,6 +73,16 @@ export const theme = createMuiTheme({
         minWidth: 'auto !important',
       },
     },
+    MuiPaper: {
+      root: {
+        backgroundColor: 'transparent',
+      },
+    },
+    MuiStepButton: {
+      vertical: {
+        textAlign: 'left',
+      },
+    },
   },
   props: {
     MuiButtonBase: {
