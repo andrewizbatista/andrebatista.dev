@@ -22,9 +22,6 @@ const styles = makeStyles(({ palette }: Theme) =>
         color: palette.primary.light,
       },
     },
-    location: {
-      opacity: 0.6,
-    },
   }),
 );
 

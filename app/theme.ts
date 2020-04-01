@@ -14,7 +14,7 @@ export const colors: {
   Secondary: '#14ce78',
   Dark: '#333',
   Light: '#e2e2e2',
-  LightDarker: '#e2e2e2',
+  LightDarker: '#a1a1a1',
   Error: '#ff4400',
 };
 
@@ -38,7 +38,7 @@ export const theme = createMuiTheme({
     },
     text: {
       primary: colors.Light,
-      secondary: colors.Light,
+      secondary: colors.LightDarker,
     },
   },
   typography: {
@@ -62,7 +62,8 @@ export const theme = createMuiTheme({
     subtitle1: {
       fontSize: '1.1rem',
       fontWeight: 'bold',
-      textTransform: 'uppercase',
+      // textTransform: 'uppercase',
+      letterSpacing: '1px',
     },
     subtitle2: {
       fontSize: '0.9rem',
@@ -92,6 +93,16 @@ export const theme = createMuiTheme({
     MuiStepper: {
       root: {
         padding: 0,
+      },
+    },
+    MuiStepLabel: {
+      iconContainer: {
+        paddingRight: '1.8rem',
+      },
+    },
+    MuiStepContent: {
+      root: {
+        paddingLeft: '2.5rem',
       },
     },
     MuiStepButton: {

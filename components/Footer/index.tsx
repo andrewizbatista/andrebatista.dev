@@ -25,7 +25,7 @@ const Footer = ({ me }: FooterProps) => {
 
   return (
     <Grid container direction="column" className={classes.wrapper}>
-      <Grid item>
+      <Grid item xs={12}>
         {github && (
           <Link href={github} target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} />
@@ -53,8 +53,8 @@ const Footer = ({ me }: FooterProps) => {
           {handler}
         </Typography>
       </Grid>
-      <Grid item>
-        <Typography variant="body2" className={classes.location}>
+      <Grid item xs={12}>
+        <Typography variant="body2" color="textSecondary">
           Lisboa, Portugal
         </Typography>
       </Grid>

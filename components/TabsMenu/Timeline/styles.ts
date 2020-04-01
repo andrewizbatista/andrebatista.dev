@@ -10,11 +10,6 @@ const styles = makeStyles(({}: Theme) =>
     wrapper: {
       maxWidth: '50vw',
     },
-    timelineTitle: {
-      fontSize: '1.2rem',
-      fontWeight: 'normal',
-      textTransform: 'none',
-    },
     forMoreDetails: {
       marginTop: '2rem',
       marginLeft: '2rem',

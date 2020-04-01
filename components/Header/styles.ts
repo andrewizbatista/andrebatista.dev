@@ -15,7 +15,7 @@ const styles = makeStyles(({ palette }: Theme) =>
     myName: {
       display: 'inline-block',
       cursor: 'pointer',
-      opacity: 0.6,
+      opacity: 0.8,
       transition: 'opacity 0.5s ease-out',
       userSelect: 'none',
       '&:hover': {

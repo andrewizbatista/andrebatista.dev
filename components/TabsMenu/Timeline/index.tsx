@@ -39,13 +39,13 @@ const Timeline = ({}: TimelineProps) => {
             <Step key={timelineEvent.order}>
               <StepButton onClick={() => changeStep(i)}>
                 <>
-                  <Typography variant="body1" className={classes.timelineTitle}>
+                  <Typography variant="subtitle1">
                     {timelineEvent.title}
                   </Typography>
                   <Typography variant="body1" color="primary">
                     {timelineEvent.company}
                   </Typography>
-                  <Typography variant="body2">
+                  <Typography variant="body2" color="textSecondary">
                     {`${startDate} - ${endDate}`}
                   </Typography>
                 </>
