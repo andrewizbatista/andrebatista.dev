@@ -62,19 +62,18 @@ export const theme = createMuiTheme({
     subtitle1: {
       fontSize: '1.1rem',
       fontWeight: 'bold',
-      // textTransform: 'uppercase',
       letterSpacing: '1px',
     },
     subtitle2: {
-      fontSize: '0.9rem',
-      textTransform: 'uppercase',
-      letterSpacing: '1px',
+      fontSize: '1.2rem',
     },
     body1: {
       fontSize: '1rem',
+      letterSpacing: '0.5px',
     },
     body2: {
       fontSize: '0.9rem',
+      letterSpacing: '0.5px',
     },
     fontFamily: ['Barlow Semi Condensed', 'monospace'].join(','),
   },

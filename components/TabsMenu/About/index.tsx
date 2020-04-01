@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import moment from 'moment';
 
 // Mui
 import Grid from '@material-ui/core/Grid';
@@ -13,12 +14,19 @@ import useStyles from './styles';
 const About = ({}: AboutProps) => {
   const classes = useStyles();
 
+  const lazyDate = moment('2020-03-30T00:00:00.000Z');
+  const lazyDateDiff = moment().diff(lazyDate, 'days');
+
   return (
     <Grid container direction="column" alignItems="flex-start">
-      <Grid item md={8}>
-        <Typography variant="body1">{dataMe.about}</Typography>
+      <Grid item md={4}>
+        <Typography variant="subtitle2">{dataMe.about}</Typography>
+        <Typography
+          variant="caption"
+          color="textSecondary"
+        >{`${lazyDateDiff} days have passed and I'm still procrastinating on this...`}</Typography>
       </Grid>
-      <Section title="Games" data={dataMe.games} />
+      {/* <Section title="Games" data={dataMe.games} />
       <Section title="Shows" data={dataMe.shows} />
       <Section title="Music" data={dataMe.music} />
       <Typography variant="body2" className={classes.followSpotify}>
@@ -31,7 +39,7 @@ const About = ({}: AboutProps) => {
           Spotify
         </Link>
         , I have 50+ public playlists.
-      </Typography>
+      </Typography> */}
     </Grid>
   );
 };

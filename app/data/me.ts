@@ -3,7 +3,7 @@ const dataMe: Me = {
   lastName: 'Batista',
   handler: '@andrewizbatista',
   about:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    'One day I will sit down and write something about myself, but that day has not come yet.',
   games: [
     'Kenshi',
     'Rimworld',
