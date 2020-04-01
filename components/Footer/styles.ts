@@ -25,9 +25,6 @@ const styles = makeStyles(({ palette }: Theme) =>
     location: {
       opacity: 0.6,
     },
-    handler: {
-      marginBottom: '0.25rem',
-    },
   }),
 );
 

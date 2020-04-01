@@ -5,21 +5,19 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 
-const styles = makeStyles(({ palette }: Theme) =>
+const styles = makeStyles(({}: Theme) =>
   createStyles({
     wrapper: {
       maxWidth: '50vw',
     },
     timelineTitle: {
       fontSize: '1.2rem',
-      fontWeight: 'bold',
+      fontWeight: 'normal',
+      textTransform: 'none',
     },
-    timelineCompany: {
-      fontSize: '0.9rem',
-      color: palette.primary.main,
-    },
-    timelineDate: {
-      fontSize: '0.7rem',
+    forMoreDetails: {
+      marginTop: '2rem',
+      marginLeft: '2rem',
     },
   }),
 );

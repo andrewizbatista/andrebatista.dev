@@ -4,7 +4,7 @@ interface TimelineEvent {
   endDate: Moment | null;
   title: string;
   company: string;
-  description?: any;
+  description?: string;
 }
 
 type Timeline = TimelineEvent[];

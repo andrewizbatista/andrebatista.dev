@@ -73,7 +73,7 @@ export const theme = createMuiTheme({
       fontSize: '1rem',
     },
     body2: {
-      fontSize: '0.8rem',
+      fontSize: '0.9rem',
     },
     fontFamily: ['Barlow Semi Condensed', 'monospace'].join(','),
   },

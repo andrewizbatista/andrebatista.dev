@@ -23,39 +23,54 @@ const Timeline = ({}: TimelineProps) => {
   const changeStep = useCallback((index: number) => setActiveStep(index), []);
 
   return (
-    <Stepper
-      activeStep={activeStep}
-      orientation="vertical"
-      className={classes.wrapper}
-      nonLinear
-    >
-      {dataTimeline.map((timelineEvent, i) => {
-        const startDate: string = timelineEvent.startDate.format('MMM YYYY');
-        const endDate: string = timelineEvent.endDate
-          ? timelineEvent.endDate.format('MMM YYYY')
-          : 'Now';
-        return (
-          <Step key={timelineEvent.order}>
-            <StepButton onClick={() => changeStep(i)}>
-              <>
-                <span className={classes.timelineTitle}>
-                  {timelineEvent.title}
-                </span>
-                <br />
-                <span className={classes.timelineCompany}>
-                  {timelineEvent.company}
-                </span>
-                <br />
-                <span
-                  className={classes.timelineDate}
-                >{`${startDate} - ${endDate}`}</span>
-              </>
-            </StepButton>
-            <StepContent>{timelineEvent.description}</StepContent>
-          </Step>
-        );
-      })}
-    </Stepper>
+    <>
+      <Stepper
+        activeStep={activeStep}
+        orientation="vertical"
+        className={classes.wrapper}
+        nonLinear
+      >
+        {dataTimeline.map((timelineEvent, i) => {
+          const startDate: string = timelineEvent.startDate.format('MMM YYYY');
+          const endDate: string = timelineEvent.endDate
+            ? timelineEvent.endDate.format('MMM YYYY')
+            : 'Now';
+          return (
+            <Step key={timelineEvent.order}>
+              <StepButton onClick={() => changeStep(i)}>
+                <>
+                  <Typography variant="body1" className={classes.timelineTitle}>
+                    {timelineEvent.title}
+                  </Typography>
+                  <Typography variant="body1" color="primary">
+                    {timelineEvent.company}
+                  </Typography>
+                  <Typography variant="body2">
+                    {`${startDate} - ${endDate}`}
+                  </Typography>
+                </>
+              </StepButton>
+              <StepContent>
+                <Typography variant="body1">
+                  {timelineEvent.description}
+                </Typography>
+              </StepContent>
+            </Step>
+          );
+        })}
+      </Stepper>
+      <Typography variant="body2" className={classes.forMoreDetails}>
+        For more details, go to my{' '}
+        <Link
+          href={dataMe.socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </Link>{' '}
+        page.
+      </Typography>
+    </>
   );
 };
 

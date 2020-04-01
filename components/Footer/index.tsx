@@ -49,17 +49,13 @@ const Footer = ({ me }: FooterProps) => {
             <FontAwesomeIcon className={classes.socialIcon} icon={faSpotify} />
           </Link>
         )}
-        <Typography
-          variant="subtitle1"
-          color="primary"
-          className={classes.handler}
-        >
+        <Typography variant="body1" color="primary">
           {handler}
         </Typography>
       </Grid>
       <Grid item>
-        <Typography variant="subtitle2" className={classes.location}>
-          Lisbon, Portugal
+        <Typography variant="body2" className={classes.location}>
+          Lisboa, Portugal
         </Typography>
       </Grid>
     </Grid>
