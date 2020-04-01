@@ -10,8 +10,11 @@ const styles = makeStyles(({ spacing }: Theme) =>
     skillWrapper: {
       marginTop: '1rem',
     },
+    skillName: {
+      paddingBottom: '0.4rem',
+    },
     columnSpacing: {
-      paddingRight: spacing(4),
+      paddingRight: spacing(6),
     },
   }),
 );

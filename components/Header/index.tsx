@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 
 // Mui
 import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 // Others
 import useStyles from './styles';
@@ -9,33 +10,46 @@ import useStyles from './styles';
 const Header = ({ me }: HeaderProps) => {
   const classes = useStyles();
 
-  const { firstName, lastName, handler } = me;
+  const { firstName, lastName, work } = me;
+  const { title, company, companyUrl } = work;
 
-  const [showPhoto, setShowPhoto] = useState<boolean>(false);
-  const showDezze = () => setShowPhoto(true);
-  const hideDezze = () => setShowPhoto(false);
+  const [sayHi, setSayHi] = useState<boolean>(false);
+
+  const showGreetings = useCallback(() => {
+    if (!sayHi) {
+      setSayHi(true);
+      setTimeout(() => setSayHi(false), 1000);
+    }
+  }, [sayHi]);
 
   return (
     <>
       <Typography
         variant="h1"
         className={classes.myName}
-        onMouseEnter={showDezze}
-        onMouseLeave={hideDezze}
-        onTouchStart={showDezze}
-        onTouchEnd={hideDezze}
+        onClick={showGreetings}
       >
         {`${firstName} ${lastName}`}
       </Typography>
-      <Typography variant="h2" color="primary" className={classes.myUsername}>
-        {handler}
+      <Typography
+        variant="body1"
+        color="primary"
+        className={classes.sayHi}
+        style={{ opacity: sayHi ? 1 : 0 }}
+      >
+        Oh hi there!
       </Typography>
-      <img
-        src="/static/img/andrewizbatista.png"
-        alt="André Batista"
-        className={classes.myPhoto}
-        style={{ opacity: showPhoto ? 0.3 : 0 }}
-      />
+      <Typography variant="h2" className={classes.myTitle}>
+        {`${title} @ `}
+        <Link
+          href={companyUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className={classes.company}
+        >
+          {company}
+        </Link>
+      </Typography>
     </>
   );
 };

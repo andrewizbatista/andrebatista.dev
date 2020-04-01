@@ -7,12 +7,14 @@ export const colors: {
   Secondary: string;
   Dark: string;
   Light: string;
+  LightDarker: string;
   Error: string;
 } = {
   Primary: '#14ce78',
   Secondary: '#14ce78',
   Dark: '#333',
-  Light: '#fff',
+  Light: '#e2e2e2',
+  LightDarker: '#e2e2e2',
   Error: '#ff4400',
 };
 
@@ -34,15 +36,19 @@ export const theme = createMuiTheme({
       // dark:
       // contrastText:
     },
+    text: {
+      primary: colors.Light,
+      secondary: colors.Light,
+    },
   },
   typography: {
     h1: {
-      fontSize: '6rem',
+      fontSize: '5rem',
       fontWeight: 'bold',
       letterSpacing: '2px',
       fontFamily: ['Barlow Semi Condensed', 'monospace'].join(','),
       [muiTheme.breakpoints.down('xs')]: {
-        fontSize: '4.5rem',
+        fontSize: '4rem',
       },
     },
     h2: {
@@ -54,28 +60,38 @@ export const theme = createMuiTheme({
       },
     },
     subtitle1: {
-      fontSize: '1rem',
-      [muiTheme.breakpoints.down('xs')]: {
-        fontSize: '0.8rem',
-      },
+      fontSize: '1.1rem',
+      fontWeight: 'bold',
+      textTransform: 'uppercase',
     },
     subtitle2: {
-      fontSize: '0.8rem',
-      [muiTheme.breakpoints.down('xs')]: {
-        fontSize: '0.8rem',
-      },
+      fontSize: '0.9rem',
+      textTransform: 'uppercase',
+      letterSpacing: '1px',
     },
-    fontFamily: ['Share Tech Mono', 'monospace'].join(','),
+    body1: {
+      fontSize: '1rem',
+    },
+    body2: {
+      fontSize: '0.8rem',
+    },
+    fontFamily: ['Barlow Semi Condensed', 'monospace'].join(','),
   },
   overrides: {
     MuiTab: {
       root: {
         minWidth: 'auto !important',
+        letterSpacing: '1px',
       },
     },
     MuiPaper: {
       root: {
         backgroundColor: 'transparent',
+      },
+    },
+    MuiStepper: {
+      root: {
+        padding: 0,
       },
     },
     MuiStepButton: {

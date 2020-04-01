@@ -23,52 +23,39 @@ const Timeline = ({}: TimelineProps) => {
   const changeStep = useCallback((index: number) => setActiveStep(index), []);
 
   return (
-    <>
-      <Stepper
-        activeStep={activeStep}
-        orientation="vertical"
-        className={classes.wrapper}
-        nonLinear
-      >
-        {dataTimeline.map((timelineEvent, i) => {
-          const startDate: string = timelineEvent.startDate.format('MMM YYYY');
-          const endDate: string = timelineEvent.endDate
-            ? timelineEvent.endDate.format('MMM YYYY')
-            : 'Now';
-          return (
-            <Step key={timelineEvent.order}>
-              <StepButton onClick={() => changeStep(i)}>
-                <>
-                  <span className={classes.timelineTitle}>
-                    {timelineEvent.title}
-                  </span>
-                  <br />
-                  <span
-                    className={classes.timelineSubtitle}
-                  >{`${startDate} - ${endDate}`}</span>
-                </>
-              </StepButton>
-              <StepContent>
-                <Typography variant="caption">
-                  {timelineEvent.description}
-                </Typography>
-              </StepContent>
-            </Step>
-          );
-        })}
-      </Stepper>
-      <Typography variant="body2">
-        To check my 5 previous experiences, check my{' '}
-        <Link
-          href={dataMe.socials.linkedin}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </Link>{' '}
-        page.
-      </Typography>
-    </>
+    <Stepper
+      activeStep={activeStep}
+      orientation="vertical"
+      className={classes.wrapper}
+      nonLinear
+    >
+      {dataTimeline.map((timelineEvent, i) => {
+        const startDate: string = timelineEvent.startDate.format('MMM YYYY');
+        const endDate: string = timelineEvent.endDate
+          ? timelineEvent.endDate.format('MMM YYYY')
+          : 'Now';
+        return (
+          <Step key={timelineEvent.order}>
+            <StepButton onClick={() => changeStep(i)}>
+              <>
+                <span className={classes.timelineTitle}>
+                  {timelineEvent.title}
+                </span>
+                <br />
+                <span className={classes.timelineCompany}>
+                  {timelineEvent.company}
+                </span>
+                <br />
+                <span
+                  className={classes.timelineDate}
+                >{`${startDate} - ${endDate}`}</span>
+              </>
+            </StepButton>
+            <StepContent>{timelineEvent.description}</StepContent>
+          </Step>
+        );
+      })}
+    </Stepper>
   );
 };
 

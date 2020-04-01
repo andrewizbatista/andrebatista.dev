@@ -17,11 +17,11 @@ import {
 // Others
 import useStyles from './styles';
 
-const Socials = ({ socials, work }: SocialsProps) => {
+const Footer = ({ me }: FooterProps) => {
   const classes = useStyles();
 
+  const { handler, socials } = me;
   const { github, linkedin, instagram, spotify } = socials;
-  const { title, company, companyUrl } = work;
 
   return (
     <Grid container direction="column" className={classes.wrapper}>
@@ -49,19 +49,15 @@ const Socials = ({ socials, work }: SocialsProps) => {
             <FontAwesomeIcon className={classes.socialIcon} icon={faSpotify} />
           </Link>
         )}
+        <Typography
+          variant="subtitle1"
+          color="primary"
+          className={classes.handler}
+        >
+          {handler}
+        </Typography>
       </Grid>
       <Grid item>
-        <Typography variant="subtitle1">
-          {`${title} @ `}
-          <Link
-            href={companyUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={classes.company}
-          >
-            {company}
-          </Link>
-        </Typography>
         <Typography variant="subtitle2" className={classes.location}>
           Lisbon, Portugal
         </Typography>
@@ -70,9 +66,8 @@ const Socials = ({ socials, work }: SocialsProps) => {
   );
 };
 
-export interface SocialsProps {
-  socials: Socials;
-  work: Work;
+export interface FooterProps {
+  me: Me;
 }
 
-export default Socials;
+export default Footer;

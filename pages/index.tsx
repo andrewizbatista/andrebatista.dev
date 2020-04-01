@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 
 // Components
 import PageLayout from 'components/PageLayout';
-import Socials from 'components/Socials';
+import Footer from 'components/Footer';
 import Header from 'components/Header';
 import TabsMenu from 'components/TabsMenu';
 
@@ -31,7 +31,6 @@ const useStyles = makeStyles(({ spacing }: Theme) => ({
 const HomePage = ({ page, me }: HomePageProps) => {
   const theme = useTheme();
   const classes = useStyles(theme);
-  const { socials, work } = me;
 
   return (
     <PageLayout page={page}>
@@ -48,7 +47,7 @@ const HomePage = ({ page, me }: HomePageProps) => {
         </Grid>
 
         <Grid item className={classes.spacingBottom}>
-          <Socials socials={socials} work={work} />
+          <Footer me={me} />
         </Grid>
       </Grid>
     </PageLayout>

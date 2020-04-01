@@ -18,7 +18,9 @@ const Skills = ({}: SkillsProps) => {
         <Typography variant="subtitle1">Frontend</Typography>
         {dataSkills.frontend.map((skill) => (
           <div key={skill.name} className={classes.skillWrapper}>
-            <Typography variant="caption">{skill.name}</Typography>
+            <Typography variant="body1" className={classes.skillName}>
+              {skill.name}
+            </Typography>
             <LinearProgress
               variant="determinate"
               color="primary"
@@ -31,7 +33,9 @@ const Skills = ({}: SkillsProps) => {
         <Typography variant="subtitle1">Backend</Typography>
         {dataSkills.backend.map((skill) => (
           <div key={skill.name} className={classes.skillWrapper}>
-            <Typography variant="caption">{skill.name}</Typography>
+            <Typography variant="body1" className={classes.skillName}>
+              {skill.name}
+            </Typography>
             <LinearProgress
               variant="determinate"
               color="primary"

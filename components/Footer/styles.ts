@@ -14,7 +14,6 @@ const styles = makeStyles(({ palette }: Theme) =>
     },
     socialIcon: {
       marginRight: '0.5rem',
-      marginBottom: '0.2rem',
       cursor: 'pointer',
       width: iconSize,
       height: iconSize,
@@ -26,12 +25,8 @@ const styles = makeStyles(({ palette }: Theme) =>
     location: {
       opacity: 0.6,
     },
-    company: {
-      transition: 'color 0.2s ease',
-      '&:hover': {
-        textDecoration: 'none',
-        color: palette.primary.light,
-      },
+    handler: {
+      marginBottom: '0.25rem',
     },
   }),
 );

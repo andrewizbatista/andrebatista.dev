@@ -9,7 +9,7 @@ const styles = makeStyles(({}: Theme) =>
   createStyles({
     wrapper: {
       marginTop: '1rem',
-      marginBottom: '1rem',
+      marginBottom: '2rem',
     },
   }),
 );

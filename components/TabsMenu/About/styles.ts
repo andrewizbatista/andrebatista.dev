@@ -8,7 +8,7 @@ import {
 const styles = makeStyles(({}: Theme) =>
   createStyles({
     sectionSpacing: {
-      marginTop: '1rem',
+      marginTop: '2rem',
     },
     followSpotify: {
       display: 'block',
