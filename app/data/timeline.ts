@@ -8,7 +8,7 @@ const dataTimeline: Timeline = [
     title: 'React Developer',
     company: 'The Virtual Forge',
     description:
-      "I'm part of the JavaScript Engineering Team, mainly developing the React side in our PWAs and responsible for our Next.js projects, all while contributing to our internal tooling with reusable components and boilerplates.",
+      'I’m part of the JavaScript Engineering Team, my work consists mainly in developing the frontend of our apps. I’m also responsible for all our Next.js projects and keeping our internal tooling up to date (boilerplates, storybooks, hooks), which is something I’m quite passionate about.Since I started I’ve had the opportunity to work in some exciting projects such as the EMEA Service Portal for Facebook, SWXR for Google and the Learning Management System for Jaguar Land Rover.',
   },
   {
     order: 2,
