@@ -6,7 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import LinearProgress from '@material-ui/core/LinearProgress';
 
 // Others
-import dataSkills from 'app/data/skills';
+import dataSkills from 'src/data/skills';
 import useStyles from './styles';
 
 const Skills = ({}: SkillsProps) => {

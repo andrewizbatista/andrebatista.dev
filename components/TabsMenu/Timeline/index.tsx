@@ -9,8 +9,8 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
 // Others
-import dataTimeline from 'app/data/timeline';
-import dataMe from 'app/data/me';
+import dataTimeline from 'src/data/timeline';
+import dataMe from 'src/data/me';
 import useStyles from './styles';
 
 const Timeline = ({}: TimelineProps) => {

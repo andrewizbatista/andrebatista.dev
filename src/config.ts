@@ -1,4 +1,4 @@
-import { colors } from 'app/theme';
+import { colors } from 'src/theme';
 
 const appConfig: AppConfig = {
   developerSignature: 'André Batista < @andrewizbatista >',

@@ -9,7 +9,7 @@ import Hidden from '@material-ui/core/Hidden';
 import MetaTags from 'components/MetaTags';
 
 // Others
-import dataParticles from 'app/data/particles';
+import dataParticles from 'src/data/particles';
 import useStyles from './styles';
 
 const PageLayout = ({ page, children }: PageLayoutProps) => {
@@ -22,7 +22,8 @@ const PageLayout = ({ page, children }: PageLayoutProps) => {
         container
         direction="row"
         justify="space-between"
-        alignItems="stretch">
+        alignItems="stretch"
+      >
         <Hidden smDown>
           <Grid item xs={12} sm={3} lg={2} className={classes.sidebar}>
             <Particles height="100%" params={dataParticles} />

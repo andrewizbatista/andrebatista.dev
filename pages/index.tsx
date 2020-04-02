@@ -12,8 +12,8 @@ import Header from 'components/Header';
 import TabsMenu from 'components/TabsMenu';
 
 // Data
-import dataMe from 'app/data/me';
-import dataPage from 'app/data/page';
+import dataMe from 'src/data/me';
+import dataPage from 'src/data/page';
 
 // Styles
 const useStyles = makeStyles(({ spacing }: Theme) => ({

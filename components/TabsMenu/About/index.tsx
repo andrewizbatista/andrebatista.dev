@@ -7,8 +7,8 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
 // Others
-import dataMe from 'app/data/me';
-import commaSeparatedStrings from 'app/helpers/commaSeparatedStrings';
+import dataMe from 'src/data/me';
+import commaSeparatedStrings from 'src/helpers/commaSeparatedStrings';
 import useStyles from './styles';
 
 const About = ({}: AboutProps) => {

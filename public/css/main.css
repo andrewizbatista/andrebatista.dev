@@ -10,7 +10,7 @@
 
 body {
   background: #212121;
-  background-image: url('/static/img/galaxy.jpg');
+  background-image: url('/img/galaxy.jpg');
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-attachment: fixed !important;

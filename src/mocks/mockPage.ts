@@ -1,6 +1,6 @@
 import { company, lorem, internet, image } from 'faker';
-import generateMocks from 'app/helpers/generateMocks';
-import appConfig from 'app/config';
+import generateMocks from 'src/helpers/generateMocks';
+import appConfig from 'src/config';
 
 const mockPage = (): Page => ({
   url: internet.url(),
