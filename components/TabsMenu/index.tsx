@@ -1,6 +1,6 @@
 import React, { useState, ChangeEvent } from 'react';
 
-// Mui
+// Components
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import About from './About';

@@ -1,11 +1,9 @@
 import React from 'react';
 import Particles from 'react-particles-js';
 
-// Mui
+// Components
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-
-// Components
 import MetaTags from 'components/MetaTags';
 
 // Others

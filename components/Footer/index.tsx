@@ -1,11 +1,4 @@
 import React from 'react';
-
-// Mui
-import Grid from '@material-ui/core/Grid';
-import Link from '@material-ui/core/Link';
-import Typography from '@material-ui/core/Typography';
-
-// Assets
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faGithub,
@@ -13,6 +6,11 @@ import {
   faInstagram,
   faSpotify,
 } from '@fortawesome/free-brands-svg-icons';
+
+// Components
+import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
 
 // Others
 import useStyles from './styles';

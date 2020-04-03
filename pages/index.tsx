@@ -1,36 +1,22 @@
+/**
+ * HomePage
+ */
 import React from 'react';
-import { makeStyles, useTheme } from '@material-ui/styles';
-import { Theme } from '@material-ui/core/styles';
-
-// Mui
-import Grid from '@material-ui/core/Grid';
 
 // Components
+import Grid from '@material-ui/core/Grid';
 import PageLayout from 'components/PageLayout';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
 import TabsMenu from 'components/TabsMenu';
 
-// Data
+// Utils
 import dataMe from 'src/data/me';
 import dataPage from 'src/data/page';
-
-// Styles
-const useStyles = makeStyles(({ spacing }: Theme) => ({
-  wrapper: {
-    height: '100vh',
-  },
-  spacingTop: {
-    paddingTop: spacing(5),
-  },
-  spacingBottom: {
-    paddingBottom: spacing(2),
-  },
-}));
+import useGlobalStyles from 'src/styles';
 
 const HomePage = ({ page, me }: HomePageProps) => {
-  const theme = useTheme();
-  const classes = useStyles(theme);
+  const globalClasses = useGlobalStyles();
 
   return (
     <PageLayout page={page}>
@@ -39,14 +25,13 @@ const HomePage = ({ page, me }: HomePageProps) => {
         direction="column"
         justify="space-between"
         alignItems="stretch"
-        className={classes.wrapper}
+        className={globalClasses.wrapper}
       >
-        <Grid item className={classes.spacingTop}>
+        <Grid item className={globalClasses.spacingTop}>
           <Header me={me} />
           <TabsMenu />
         </Grid>
-
-        <Grid item className={classes.spacingBottom}>
+        <Grid item className={globalClasses.spacingBottom}>
           <Footer me={me} />
         </Grid>
       </Grid>

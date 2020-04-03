@@ -1,18 +1,18 @@
 import React from 'react';
 import moment from 'moment';
 
-// Mui
+// Components
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Link from '@material-ui/core/Link';
+// import Link from '@material-ui/core/Link';
 
 // Others
 import dataMe from 'src/data/me';
-import commaSeparatedStrings from 'src/helpers/commaSeparatedStrings';
-import useStyles from './styles';
+// import commaSeparatedStrings from 'src/helpers/commaSeparatedStrings';
+// import useStyles from './styles';
 
 const About = ({}: AboutProps) => {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   const lazyDate = moment('2020-03-30T00:00:00.000Z');
   const lazyDateDiff = moment().diff(lazyDate, 'days');
@@ -44,20 +44,20 @@ const About = ({}: AboutProps) => {
   );
 };
 
-const Section = ({ title, data }: { title: string; data: string[] }) => {
-  const classes = useStyles();
+// const Section = ({ title, data }: { title: string; data: string[] }) => {
+//   const classes = useStyles();
 
-  return (
-    <Grid item md={5} className={classes.sectionSpacing}>
-      <Typography variant="subtitle2" color="primary">
-        {title}
-      </Typography>
-      <Typography variant="body1">
-        {`${commaSeparatedStrings(data)}...`}
-      </Typography>
-    </Grid>
-  );
-};
+//   return (
+//     <Grid item md={5} className={classes.sectionSpacing}>
+//       <Typography variant="subtitle2" color="primary">
+//         {title}
+//       </Typography>
+//       <Typography variant="body1">
+//         {`${commaSeparatedStrings(data)}...`}
+//       </Typography>
+//     </Grid>
+//   );
+// };
 
 export interface AboutProps {}
 
