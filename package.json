@@ -18,7 +18,7 @@
     "export": "npm run build && next export",
     "lint": "eslint --ignore-path .eslintignore",
     "lint:staged": "lint-staged",
-    "generate": "plop --plopfile internals/plop/plopfile.js"
+    "generate": "plop --plopfile .plop/plopfile.js"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
