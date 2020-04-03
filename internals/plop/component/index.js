@@ -29,7 +29,7 @@ const componentGenerator = {
     },
   ],
   actions: () => {
-    const newPath = path.join(componentsPath, '{{properCase componentName}}');
+    const newPath = path.join(componentsPath, '{{pascalCase componentName}}');
 
     const actions = [];
 
