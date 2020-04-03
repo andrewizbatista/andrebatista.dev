@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const componentsPath = path.resolve(__dirname, '../../components');
-const templateFiles = ['index.tsx', 'styles.ts'];
+const templateFiles = ['index.tsx', 'styles.ts', 'index.stories.tsx'];
 
 const componentGenerator = {
   description: 'Create a new component.',
