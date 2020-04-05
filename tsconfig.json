@@ -36,6 +36,6 @@
     "target": "esnext",
     "typeRoots": ["./types/*"]
   },
-  "exclude": ["node_modules", "internals"],
+  "exclude": ["node_modules", ".plop", ".storybook"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
 }
