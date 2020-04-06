@@ -10,7 +10,7 @@ import Timeline from './Timeline';
 // Others
 import useStyles from './styles';
 
-const TabsMenu = ({ me, skills, timeline }: TabsMenuProps) => {
+const PageContent = ({ me, skills, timeline }: PageContentProps) => {
   const classes = useStyles();
 
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -38,10 +38,10 @@ const TabsMenu = ({ me, skills, timeline }: TabsMenuProps) => {
   );
 };
 
-export interface TabsMenuProps {
+export interface PageContentProps {
   me: Me;
   skills: Skills;
   timeline: Timeline;
 }
 
-export default TabsMenu;
+export default PageContent;

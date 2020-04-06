@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import PageLayout from 'components/PageLayout';
 import Footer from 'components/Footer';
 import Header from 'components/Header';
-import TabsMenu from 'components/TabsMenu';
+import PageContent from 'components/PageContent';
 
 // Utils
 import dataMe from 'src/data/me';
@@ -25,16 +25,16 @@ const HomePage = ({ me, page, skills, timeline }: HomePageProps) => {
     <PageLayout page={page}>
       <Grid
         container
-        direction="column"
+        direction="row"
         justify="space-between"
         alignItems="stretch"
         className={globalClasses.wrapper}
       >
-        <Grid item className={globalClasses.spacingTop}>
+        <Grid item xs={12}>
           <Header me={me} />
-          <TabsMenu me={me} skills={skills} timeline={timeline} />
+          <PageContent me={me} skills={skills} timeline={timeline} />
         </Grid>
-        <Grid item className={globalClasses.spacingBottom}>
+        <Grid item xs={12} className={globalClasses.footer}>
           <Footer me={me} />
         </Grid>
       </Grid>

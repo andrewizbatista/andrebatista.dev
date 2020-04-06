@@ -13,11 +13,11 @@ const Skills = ({ skills }: SkillsProps) => {
 
   return (
     <Grid container direction="row" alignItems="flex-start">
-      <Grid item md={3} className={classes.columnSpacing}>
+      <Grid item xs={12} sm={6} md={4} lg={4} className={classes.columnSpacing}>
         <Typography variant="subtitle1">Frontend</Typography>
         <SkillSection skills={skills.frontend} />
       </Grid>
-      <Grid item md={3}>
+      <Grid item xs={12} sm={6} md={4} lg={4} className={classes.columnSpacing}>
         <Typography variant="subtitle1">Backend</Typography>
         <SkillSection skills={skills.backend} />
       </Grid>

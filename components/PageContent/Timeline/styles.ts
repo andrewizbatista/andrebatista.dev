@@ -7,8 +7,8 @@ import {
 
 const styles = makeStyles(({}: Theme) =>
   createStyles({
-    wrapper: {
-      maxWidth: '50vw',
+    stepper: {
+      width: '90%',
     },
     forMoreDetails: {
       marginTop: '2rem',

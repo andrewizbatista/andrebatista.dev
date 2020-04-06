@@ -7,10 +7,10 @@ import {
 
 const iconSize = '2rem !important';
 
-const styles = makeStyles(({ palette }: Theme) =>
+const styles = makeStyles(({ palette, spacing }: Theme) =>
   createStyles({
     wrapper: {
-      zIndex: 100,
+      paddingTop: spacing(4),
     },
     socialIcon: {
       marginRight: '0.5rem',

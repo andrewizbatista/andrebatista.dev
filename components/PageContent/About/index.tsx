@@ -10,8 +10,8 @@ const About = ({ me }: AboutProps) => {
   const lazyDateDiff = moment().diff(lazyDate, 'days');
 
   return (
-    <Grid container direction="column" alignItems="flex-start">
-      <Grid item md={4}>
+    <Grid container direction="row" alignItems="flex-start">
+      <Grid item xs={12} sm={10} md={6} lg={4}>
         <Typography variant="subtitle2">{me.about}</Typography>
         <Typography
           variant="caption"

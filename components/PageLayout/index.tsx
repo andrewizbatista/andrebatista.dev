@@ -23,11 +23,27 @@ const PageLayout = ({ page, children }: PageLayoutProps) => {
         alignItems="stretch"
       >
         <Hidden smDown>
-          <Grid item xs={12} sm={3} lg={2} className={classes.sidebar}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={2}
+            lg={2}
+            xl={2}
+            className={classes.sidebar}
+          >
             <Particles height="100%" params={dataParticles} />
           </Grid>
         </Hidden>
-        <Grid item xs={12} sm={9} lg={10} className={classes.content}>
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={10}
+          lg={10}
+          xl={10}
+          className={classes.content}
+        >
           {children}
         </Grid>
       </Grid>

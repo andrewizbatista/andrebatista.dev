@@ -14,6 +14,7 @@ const styles = makeStyles(({ spacing }: Theme) =>
       paddingBottom: '0.4rem',
     },
     columnSpacing: {
+      paddingBottom: spacing(4),
       paddingRight: spacing(6),
     },
   }),

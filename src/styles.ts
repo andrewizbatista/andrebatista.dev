@@ -5,16 +5,13 @@ import {
   Theme,
 } from '@material-ui/core/styles';
 
-const styles = makeStyles(({ spacing }: Theme) =>
+const styles = makeStyles(({}: Theme) =>
   createStyles({
     wrapper: {
       height: '100vh',
     },
-    spacingTop: {
-      paddingTop: spacing(5),
-    },
-    spacingBottom: {
-      paddingBottom: spacing(2),
+    footer: {
+      marginTop: 'auto',
     },
   }),
 );
