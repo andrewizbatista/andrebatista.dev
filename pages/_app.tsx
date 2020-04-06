@@ -11,6 +11,15 @@ class MyApp extends App {
     if (jssStyles) {
       jssStyles.parentNode!.removeChild(jssStyles);
     }
+
+    const consoleStyles = [
+      'font-size: 1rem',
+      'font-weight: bold',
+      `color: ${theme.palette.primary.main}`,
+    ].join(';');
+
+    console.log('%cHello friend! Looking for the source code?', consoleStyles); // eslint-disable-line no-console
+    console.log('https://github.com/andrewizbatista/andrebatista.dev'); // eslint-disable-line no-console
   }
 
   public render() {
