@@ -1,18 +1,18 @@
 import { colors } from 'src/theme';
 
 const appConfig: AppConfig = {
-  developerSignature: 'André Batista < @andrewizbatista >',
-  developerWebsite: 'https://andrebatista.dev',
-
   appName: 'André Batista',
   appWebsite: 'https://andrebatista.dev',
   appThemeColor: colors.Secondary,
+  googleFonts: ['Barlow+Semi+Condensed:400,700'],
   defaultLocale: {
     code: 'en',
     codeRegion: 'en_GB',
     name: 'English',
   },
   availableLocales: [],
+  developerSignature:
+    'Created by André Batista <@andrewizbatista> (https://andrebatista.dev)',
 };
 
 export default appConfig;

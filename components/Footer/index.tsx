@@ -25,17 +25,32 @@ const Footer = ({ me }: FooterProps) => {
     <Grid container direction="column" className={classes.wrapper}>
       <Grid item xs={12}>
         {github && (
-          <Link href={github} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={github}
+            title={`${handler} on GitHub`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon className={classes.socialIcon} icon={faGithub} />
           </Link>
         )}
         {linkedin && (
-          <Link href={linkedin} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={linkedin}
+            title={`${handler} on LinkedIn`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon className={classes.socialIcon} icon={faLinkedin} />
           </Link>
         )}
         {instagram && (
-          <Link href={instagram} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={instagram}
+            title={`${handler} on Instagram`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon
               className={classes.socialIcon}
               icon={faInstagram}
@@ -43,7 +58,12 @@ const Footer = ({ me }: FooterProps) => {
           </Link>
         )}
         {spotify && (
-          <Link href={spotify} target="_blank" rel="noopener noreferrer">
+          <Link
+            href={spotify}
+            title={`${handler} on Spotify`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <FontAwesomeIcon className={classes.socialIcon} icon={faSpotify} />
           </Link>
         )}

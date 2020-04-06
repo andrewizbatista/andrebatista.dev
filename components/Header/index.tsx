@@ -43,6 +43,7 @@ const Header = ({ me }: HeaderProps) => {
         {`${title} @ `}
         <Link
           href={companyUrl}
+          title={company}
           target="_blank"
           rel="noopener noreferrer"
           className={classes.company}

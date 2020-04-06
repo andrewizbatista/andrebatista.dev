@@ -35,9 +35,9 @@ const PageLayout = ({ page, children }: PageLayoutProps) => {
   );
 };
 
-export default PageLayout;
-
 export interface PageLayoutProps {
   page: Page;
   children: any;
 }
+
+export default PageLayout;
