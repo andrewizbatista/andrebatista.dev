@@ -3,7 +3,7 @@ import moment from 'moment';
 const dataTimeline: Timeline = [
   {
     order: 1,
-    startDate: moment('2019-02-01T00:00:00.000Z'),
+    startDate: moment('2019-02-01T00:00:00.000Z').format('MMM YYYY'),
     endDate: null,
     title: 'React Developer',
     company: 'The Virtual Forge',
@@ -12,8 +12,8 @@ const dataTimeline: Timeline = [
   },
   {
     order: 2,
-    startDate: moment('2016-09-01T00:00:00.000Z'),
-    endDate: moment('2018-12-01T00:00:00.000Z'),
+    startDate: moment('2016-09-01T00:00:00.000Z').format('MMM YYYY'),
+    endDate: moment('2018-12-01T00:00:00.000Z').format('MMM YYYY'),
     title: 'React Developer & Co-Founder',
     company: 'Glaiveware',
     description:
@@ -21,8 +21,8 @@ const dataTimeline: Timeline = [
   },
   {
     order: 3,
-    startDate: moment('2016-09-01T00:00:00.000Z'),
-    endDate: moment('2017-12-01T00:00:00.000Z'),
+    startDate: moment('2016-09-01T00:00:00.000Z').format('MMM YYYY'),
+    endDate: moment('2017-12-01T00:00:00.000Z').format('MMM YYYY'),
     title: 'Full Stack Developer',
     company: 'Sycret.ink',
     description:

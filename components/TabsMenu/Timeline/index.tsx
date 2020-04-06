@@ -9,11 +9,9 @@ import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
 
 // Others
-import dataTimeline from 'src/data/timeline';
-import dataMe from 'src/data/me';
 import useStyles from './styles';
 
-const Timeline = ({}: TimelineProps) => {
+const Timeline = ({ me, timeline }: TimelineProps) => {
   const classes = useStyles();
 
   const [activeStep, setActiveStep] = useState<number>(0);
@@ -28,14 +26,11 @@ const Timeline = ({}: TimelineProps) => {
         className={classes.wrapper}
         nonLinear
       >
-        {dataTimeline.map((timelineEvent, i) => {
-          const startDate: string = timelineEvent.startDate.format('MMM YYYY');
-          const endDate: string = timelineEvent.endDate
-            ? timelineEvent.endDate.format('MMM YYYY')
-            : 'Now';
+        {timeline.map((timelineEvent, index) => {
+          const { startDate, endDate } = timelineEvent;
           return (
             <Step key={timelineEvent.order}>
-              <StepButton onClick={() => changeStep(i)}>
+              <StepButton onClick={() => changeStep(index)}>
                 <>
                   <Typography variant="subtitle1">
                     {timelineEvent.title}
@@ -44,7 +39,7 @@ const Timeline = ({}: TimelineProps) => {
                     {timelineEvent.company}
                   </Typography>
                   <Typography variant="body2" color="textSecondary">
-                    {`${startDate} - ${endDate}`}
+                    {`${startDate} - ${endDate || 'Now'}`}
                   </Typography>
                 </>
               </StepButton>
@@ -60,7 +55,7 @@ const Timeline = ({}: TimelineProps) => {
       <Typography variant="body2" className={classes.forMoreDetails}>
         For more details, go to my{' '}
         <Link
-          href={dataMe.socials.linkedin}
+          href={me.socials.linkedin}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -72,6 +67,9 @@ const Timeline = ({}: TimelineProps) => {
   );
 };
 
-export interface TimelineProps {}
+export interface TimelineProps {
+  me: Me;
+  timeline: Timeline;
+}
 
 export default Timeline;

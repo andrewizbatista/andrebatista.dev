@@ -4,7 +4,7 @@ import Particles from 'react-particles-js';
 // Components
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
-import MetaTags from 'components/MetaTags';
+import DynamicMetaTags from 'components/MetaTags/Dynamic';
 
 // Others
 import dataParticles from 'src/data/particles';
@@ -15,7 +15,7 @@ const PageLayout = ({ page, children }: PageLayoutProps) => {
 
   return (
     <>
-      <MetaTags page={page} />
+      <DynamicMetaTags page={page} />
       <Grid
         container
         direction="row"

@@ -2,6 +2,7 @@
  * HomePage
  */
 import React from 'react';
+import { GetStaticProps } from 'next';
 
 // Components
 import Grid from '@material-ui/core/Grid';
@@ -13,9 +14,11 @@ import TabsMenu from 'components/TabsMenu';
 // Utils
 import dataMe from 'src/data/me';
 import dataPage from 'src/data/page';
+import dataSkills from 'src/data/skills';
+import dataTimeline from 'src/data/timeline';
 import useGlobalStyles from 'src/styles';
 
-const HomePage = ({ page, me }: HomePageProps) => {
+const HomePage = ({ me, page, skills, timeline }: HomePageProps) => {
   const globalClasses = useGlobalStyles();
 
   return (
@@ -29,7 +32,7 @@ const HomePage = ({ page, me }: HomePageProps) => {
       >
         <Grid item className={globalClasses.spacingTop}>
           <Header me={me} />
-          <TabsMenu />
+          <TabsMenu me={me} skills={skills} timeline={timeline} />
         </Grid>
         <Grid item className={globalClasses.spacingBottom}>
           <Footer me={me} />
@@ -39,16 +42,22 @@ const HomePage = ({ page, me }: HomePageProps) => {
   );
 };
 
-HomePage.getInitialProps = async (): Promise<HomePageProps> => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
-    page: dataPage,
-    me: dataMe,
+    props: {
+      me: dataMe,
+      page: dataPage,
+      skills: dataSkills,
+      timeline: dataTimeline,
+    },
   };
 };
 
 export interface HomePageProps {
-  page: Page;
   me: Me;
+  page: Page;
+  skills: Skills;
+  timeline: Timeline;
 }
 
 export default HomePage;

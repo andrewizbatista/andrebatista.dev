@@ -1,9 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 
-const MetaTags = ({
+const DynamicMetaTags = ({
   page: { metaTitle, metaDescription, metaKeywords, metaImage },
-}: MetaTagsProps) => {
+}: DynamicMetaTagsProps) => {
   return (
     <Head>
       <title>{metaTitle}</title>
@@ -18,8 +18,8 @@ const MetaTags = ({
   );
 };
 
-export interface MetaTagsProps {
+export interface DynamicMetaTagsProps {
   page: Page;
 }
 
-export default MetaTags;
+export default DynamicMetaTags;

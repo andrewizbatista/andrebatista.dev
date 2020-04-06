@@ -1,15 +1,24 @@
 import React from 'react';
 import { styled } from '@material-ui/styles';
 
-const ErrorPage = ({}: ErrorPageProps) => {
+import Typography from '@material-ui/core/Typography';
+
+const ErrorPage = ({ statusCode }: ErrorPageProps) => {
   return (
     <Wrapper>
-      <h1>404: Page not found</h1>
+      <Typography variant="h4">{`${statusCode}: Something went wrong :(`}</Typography>
     </Wrapper>
   );
 };
 
-export interface ErrorPageProps {}
+ErrorPage.getInitialProps = ({ res, err }: any) => {
+  const statusCode = res ? res.statusCode : err ? err.statusCode : 404;
+  return { statusCode };
+};
+
+export interface ErrorPageProps {
+  statusCode: number;
+}
 
 export default ErrorPage;
 

@@ -10,7 +10,7 @@ import Timeline from './Timeline';
 // Others
 import useStyles from './styles';
 
-const TabsMenu = ({}: TabsMenuProps) => {
+const TabsMenu = ({ me, skills, timeline }: TabsMenuProps) => {
   const classes = useStyles();
 
   const [activeTab, setActiveTab] = useState<number>(0);
@@ -31,13 +31,17 @@ const TabsMenu = ({}: TabsMenuProps) => {
         <Tab label="Skills" />
         <Tab label="Timeline" />
       </Tabs>
-      {activeTab === 0 && <About />}
-      {activeTab === 1 && <Skills />}
-      {activeTab === 2 && <Timeline />}
+      {activeTab === 0 && <About me={me} />}
+      {activeTab === 1 && <Skills me={me} skills={skills} />}
+      {activeTab === 2 && <Timeline me={me} timeline={timeline} />}
     </>
   );
 };
 
-export interface TabsMenuProps {}
+export interface TabsMenuProps {
+  me: Me;
+  skills: Skills;
+  timeline: Timeline;
+}
 
 export default TabsMenu;
