@@ -4,6 +4,19 @@ const dataMe: Me = {
   handler: '@andrewizbatista',
   about:
     'One day I will sit down and write something about myself, but that day has not come yet.',
+
+  socials: {
+    github: 'https://github.com/andrewizbatista',
+    twitter: 'https://twitter.com/andrewizbatista',
+    linkedin: 'https://www.linkedin.com/in/andrewizbatista',
+    instagram: 'https://www.instagram.com/andrewizbatista',
+    spotify: 'https://open.spotify.com/user/b1ni295n7z73k4dsj1cfz7jt7',
+  },
+  work: {
+    title: 'Senior Frontend Engineer',
+    company: 'BinaryEdge',
+    companyUrl: 'https://binaryedge.io',
+  },
   games: [
     'Kenshi',
     'Rimworld',
@@ -44,18 +57,6 @@ const dataMe: Me = {
     'Jazz',
     'Swing',
   ],
-  socials: {
-    github: 'https://github.com/andrewizbatista',
-    twitter: 'https://twitter.com/andrewizbatista',
-    linkedin: 'https://www.linkedin.com/in/andrewizbatista',
-    instagram: 'https://www.instagram.com/andrewizbatista',
-    spotify: 'https://open.spotify.com/user/b1ni295n7z73k4dsj1cfz7jt7',
-  },
-  work: {
-    title: 'React Developer',
-    company: 'The Virtual Forge',
-    companyUrl: 'https://thevirtualforge.com',
-  },
 };
 
 export default dataMe;

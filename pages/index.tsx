@@ -32,7 +32,7 @@ const HomePage = ({ me, page, skills, timeline }: HomePageProps) => {
       >
         <Grid item xs={12}>
           <Header me={me} />
-          <PageContent me={me} skills={skills} timeline={timeline} />
+          {/* <PageContent me={me} skills={skills} timeline={timeline} /> */}
         </Grid>
         <Grid item xs={12} className={globalClasses.footer}>
           <Footer me={me} />
