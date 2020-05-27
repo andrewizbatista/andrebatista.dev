@@ -1,4 +1,3 @@
-# Work in Progress
-## andrebatista.dev
+# andrebatista.dev
 
-This will eventually be my own website and then I will write some proper documentation for it.
+This is my website for now, but I'm planning on completely refactor this whole thing.
